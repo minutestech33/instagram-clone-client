@@ -9,6 +9,7 @@ import Post from '../components/Post'
 import { dummyPosts } from '../utils/posts'
 import { NavLink } from 'react-router-dom'
 import { DesignContext } from '../context/DesignContent'
+import Footer from '../components/Footer'
 
 function Feed() {
   const [storyObsolete, setStoryObsolete] = useState(0)
@@ -20,7 +21,7 @@ function Feed() {
   return (
     <div className='w-full h-screen flex justify-center gap-20'>
       {/* Home feed section */}
-      <div className='w-[636px] max-md:w-full h-max pb-6 mt-9 max-md:mt-0'>
+      <div className='w-[636px] max-md:w-full h-max mt-9 max-md:mt-0'>
         {/* Home story section */}
         <div className='w-full flex max-md:px-[6.5px] items-center relative select-none overflow-x-scroll no-scrollbar border-zinc-800 max-md:border-b max-md:py-3'>
           {
@@ -80,6 +81,7 @@ function Feed() {
             })
           }
         </div>
+        <Footer />
       </div>
       {/* Home your profile and suggestion profile section  */}
       <div className='w-[300px] h-max mt-9 max-[1150px]:hidden'>
