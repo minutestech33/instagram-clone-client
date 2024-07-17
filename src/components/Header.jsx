@@ -11,7 +11,7 @@ function Header() {
         <div className='w-full h-full flex justify-between items-center px-3'>
             <NavLink to={"/"} className='text-xl font-semibold font-lobster text-zinc-100'>Instagram</NavLink>
             <div className='flex items-center gap-3'>
-                <div onClick={() => setShowSwitch(true)} className='flex items-center gap-2 bg-zinc-800 px-3 py-2 rounded-md'>
+                <div onClick={() => setShowSwitch(true)} className='flex items-center gap-2 bg-zinc-800 px-3 py-2 rounded-md active:scale-95'>
                     <p className='text-sm font-semibold text-zinc-100'>shuvopal89</p>
                     <FontAwesomeIcon
                         icon={faAngleDown}
