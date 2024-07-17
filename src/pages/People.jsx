@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom'
 
 function People() {
   return (
-    <div className='w-full h-screen flex flex-col items-center justify-between overflow-y-scroll'>
-      <div className='w-[570px] h-max mt-20'>
+    <div className='w-full flex flex-col items-center justify-between'>
+      <div className='w-[570px] max-md:w-full max-md:px-3 h-max mt-20 max-md:mt-3'>
         <p className='text-md font-medium text-zinc-100'>Suggested</p>
         <div className='w-full h-max flex flex-col gap-4 mt-5'>
           {
@@ -24,7 +24,7 @@ function People() {
           }
         </div>
       </div>
-      <div className='w-full flex flex-col justify-center items-center gap-2 mt-24 pb-3'>
+      <div className='w-full flex flex-col justify-center items-center gap-2 mt-24 pb-6'>
         <div className='flex items-start gap-4'>
           <NavLink className='text-xs font-medium hover:underline' target='_blank' to={'https://about.instagram.com/'}>ABOUT</NavLink>
           <NavLink className='text-xs font-medium hover:underline' target='_blank' to={'https://help.instagram.com/'}>HELP</NavLink>

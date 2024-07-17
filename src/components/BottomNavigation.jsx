@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons'
 import { faCompass, faSquarePlus, faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons'
 import { DesignContext } from '../context/DesignContent'
 
@@ -28,6 +28,7 @@ function BottomNavigation() {
                 className='text-2xl text-zinc-100 active:scale-95'
             />
             <BottomIcon icon={faCompass} link={'/explore'} />
+            <BottomIcon icon={faUser} link={'/explore/people'} />
             <NavLink to={'/shuvopal89'} className='h-11 w-11 flex justify-center items-center rounded-md'>
                 <img src="https://pics.craiyon.com/2023-07-15/dc2ec5a571974417a5551420a4fb0587.webp" className='h-6 w-6 select-none rounded-full object-cover active:scale-95' alt="" />
             </NavLink>

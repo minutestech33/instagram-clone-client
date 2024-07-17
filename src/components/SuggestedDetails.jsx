@@ -2,7 +2,7 @@ import React from 'react'
 
 function SuggestedDetails({profile, username, name}) {
   return (
-    <div className='w-full flex justify-between items-center'>
+    <div className='max flex justify-between items-center'>
       <div className='flex items-center gap-3'>
         <img src={profile} className='h-12 w-12 rounded-full object-cover' alt="" />
         <div className='flex flex-col gap-0'>

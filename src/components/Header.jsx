@@ -18,10 +18,13 @@ function Header() {
                         className='text-sm text-zinc-100'
                     />
                 </div>
-                <FontAwesomeIcon
-                    icon={faHeart}
-                    className='text-2xl text-zinc-100 hover:scale-110 active:scale-95'
-                />
+                <NavLink to={'/notifications'} className={'relative'}>
+                    <FontAwesomeIcon
+                        icon={faHeart}
+                        className='text-2xl text-zinc-100 hover:scale-110 active:scale-95'
+                    />
+                    <span className='w-[9px] h-[9px] hidden bg-red-500 rounded-lg absolute top-0 -right-1'></span>
+                </NavLink>
             </div>
         </div>
     )

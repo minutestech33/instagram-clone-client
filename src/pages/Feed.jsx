@@ -19,7 +19,7 @@ function Feed() {
   const goToNext = () => (storyObsolete !== stories.length - 4) && setStoryObsolete(storyObsolete => storyObsolete += 4)
 
   return (
-    <div className='w-full h-screen flex justify-center gap-20'>
+    <div className='w-full flex justify-center gap-20'>
       {/* Home feed section */}
       <div className='w-[636px] max-md:w-full h-max mt-9 max-md:mt-0'>
         {/* Home story section */}
@@ -58,7 +58,7 @@ function Feed() {
           }
         </div>
         {/* Home main feed (all single feed) section */}
-        <div className='w-full h-max mt-4 flex flex-col items-center justify-center divide-y divide-zinc-700'>
+        <div className='w-full h-max mt-4 max-md:mt-0 flex flex-col items-center justify-center divide-y divide-zinc-700'>
           {
             dummyPosts.map((post, index) => {
               return (
