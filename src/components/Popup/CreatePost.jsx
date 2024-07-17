@@ -6,7 +6,12 @@ import { DesignContext } from '../../context/DesignContent'
 
 function CreatePost() {
     const { setShowCreatePost, showCreatePost } = useContext(DesignContext)
-    const createPostHandler = (e) => e.target.classList.contains("parent") && setShowCreatePost(false)
+    const createPostHandler = (e) => {
+        if (e.target.classList.contains("parent")) {
+            setShowCreatePost(false)
+            document.title = "Instagram"
+        }
+    }
     return (
         <div className={`absolute w-full h-screen top-0 left-0 z-50`}>
             <div className='parent relative w-full h-screen flex justify-center items-center bg-black/60' onClick={createPostHandler}>
