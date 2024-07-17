@@ -19,7 +19,7 @@ function Footer() {
                 <NavLink className='text-xs font-normal text-zinc-400 hover:underline' target='_blank' to={'https://www.facebook.com/help/instagram/261704639352628'}>Contact Uploading & Non-Users</NavLink>
                 <NavLink className='text-xs font-normal text-zinc-400 hover:underline' target='_blank' to={'https://accountscenter.instagram.com/meta_verified/?entrypoint=web_footer'}>Meta Verified</NavLink>
             </div>
-            <p className='text-xs text-zinc-400 font-normal'>© 2024 Instagram from Meta</p>
+            <p className='text-xs w-full text-center text-zinc-400 font-normal'>© 2024 Instagram from Meta</p>
         </div>
     )
 }
