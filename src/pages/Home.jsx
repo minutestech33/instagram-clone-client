@@ -51,10 +51,10 @@ function Home() {
         </div>
         {/* Home right menu or main content container */}
         <div className='h-screen w-full text-zinc-100'>
-          <div className='w-full h-[9vh] hidden max-md:block border-b border-zinc-800'>
+          <div className='w-full h-[8vh] hidden max-md:block border-b border-zinc-800'>
             <Header />
           </div>
-          <div className='w-full h-[100vh] max-md:h-[83vh] overflow-y-scroll'><Outlet /></div>
+          <div className='w-full h-[100vh] max-md:h-[84vh] overflow-y-scroll'><Outlet /></div>
           <div className='w-full h-[8vh] hidden max-md:block border-t border-zinc-800'>
             <BottomNavigation />
           </div>
