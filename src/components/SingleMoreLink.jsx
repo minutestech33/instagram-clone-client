@@ -1,0 +1,21 @@
+import React, { useContext } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { NavLink } from 'react-router-dom'
+import { DesignContext } from '../context/DesignContent'
+
+function SingleMoreLink({ icon, title, link }) {
+    const { setShowMore } = useContext(DesignContext)
+    return (
+        <NavLink onClick={() => setShowMore(false)} to={link} className='flex items-center p-4 rounded-lg hover:cursor-pointer hover:bg-zinc-700'>
+            <div className='w-8 flex justify-start'>
+                <FontAwesomeIcon
+                    icon={icon}
+                    className='text-zinc-100 text-lg'
+                />
+            </div>
+            <p className='text-zinc-100 text-sm tracking-wide font-normal'>{title}</p>
+        </NavLink>
+    )
+}
+
+export default SingleMoreLink
