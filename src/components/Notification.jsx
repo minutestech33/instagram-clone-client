@@ -7,8 +7,8 @@ function Notification({ id, username, message, profile, posted, read }) {
   return (
     <div className={`w-full p-3 rounded-lg flex justify-between items-center hover:bg-zinc-800 hover:cursor-pointer`}>
       <div className='flex items-center gap-3'>
-        <div className='relative'>
-          <img src={profile} className='max-w-9 max-h-9 object-cover rounded-full' />
+        <div className='relative flex-shrink-0'>
+          <img src={profile} className='w-9 h-9 object-cover rounded-full' />
           <div className={`h-6 w-6 absolute -bottom-2 -right-1 flex justify-center items-center rounded-full ${message === "likes your post." ? 'bg-red-500' : 'bg-indigo-500'}`}>
             <FontAwesomeIcon
               icon={message === "likes your post." ? faHeart : faImage}

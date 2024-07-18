@@ -22,7 +22,7 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                 <div className='flex items-center gap-2'>
                     {
                         isActiveStory ? (
-                            <div style={{ padding: '2px' }} className='select-none w-max flex justify-center items-center bg-gradient-to-r from-fuchsia-400 from-10% via-amber-400 via-30% to-rose-400 to-90% rounded-full hover:cursor-pointer'>
+                            <div style={{ padding: '2px' }} className='select-none flex-shrink-0 w-max flex justify-center items-center bg-gradient-to-r from-fuchsia-400 from-10% via-amber-400 via-30% to-rose-400 to-90% rounded-full hover:cursor-pointer'>
                                 <img src="https://pics.craiyon.com/2023-11-26/oMNPpACzTtO5OVERUZwh3Q.webp" className='w-10 h-10 object-cover rounded-full border-4 border-black' />
                             </div>
                         ) : (

@@ -4,11 +4,11 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 function RecentSearch({ profile, username, title, isActiveStory }) {
     return (
-        <div className='flex justify-between items-center'>
-            <div className='flex items-center gap-3'>
+        <div className='flex w-full justify-between items-center'>
+            <div className='w-full flex items-center gap-3'>
                 {
                     isActiveStory ? (
-                        <div style={{ padding: '2px' }} className='select-none w-max flex justify-center items-center bg-gradient-to-r from-fuchsia-400 from-10% via-amber-400 via-30% to-rose-400 to-90% rounded-full hover:cursor-pointer'>
+                        <div style={{ padding: '2px' }} className='select-none flex-shrink-0 w-max flex justify-center items-center bg-gradient-to-r from-fuchsia-400 from-10% via-amber-400 via-30% to-rose-400 to-90% rounded-full hover:cursor-pointer'>
                             <img src={profile} className='w-11 h-11 object-cover rounded-full border-4 border-black' />
                         </div>
                     ) : (

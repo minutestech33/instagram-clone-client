@@ -7,7 +7,7 @@ function Notifications() {
     <div className='w-full'>
       <div className='max-w-[650px] m-auto px-3'>
         <p className='text-2xl font-bold text-zinc-100 mt-6'>Notifications</p>
-
+        
         {/* New notifications container */}
         <div className='pb-4 border-b border-zinc-800 mt-4'>
           <p className='text-lg font-semibold text-zinc-100'>New</p>

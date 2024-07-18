@@ -15,19 +15,19 @@ function Search() {
         <div className='flex items-center relative mt-6'>
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
-            className='text-xl text-zinc-400 absolute top-[20px] left-[26px]'
+            className='text-xl text-zinc-400 absolute top-[15px] left-[26px]'
           />
           <input
             placeholder='Search'
             type='text'
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className='w-full px-16 py-4 text-zinc-100 bg-zinc-800 rounded-full outline-none border-none caret-zinc-400'
+            className='w-full px-16 py-3 text-zinc-100 bg-zinc-800 rounded-full outline-none border-none caret-zinc-400'
           />
           <FontAwesomeIcon
             icon={faCircleXmark}
             onClick={() => setSearch('')}
-            className='text-md text-zinc-400 absolute top-[21px] right-[26px] hover:cursor-pointer'
+            className='text-md text-zinc-400 absolute top-[16px] right-[20px] hover:cursor-pointer'
           />
         </div>
         {/* Recent search container */}
