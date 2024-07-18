@@ -11,7 +11,7 @@ function Notifications() {
         {/* New notifications container */}
         <div className='pb-4 border-b border-zinc-800 mt-4'>
           <p className='text-lg font-semibold text-zinc-100'>New</p>
-          <div className='mt-5 flex flex-col gap-2'>
+          <div className='mt-5 flex flex-col'>
             {
               notifications.filter(notification => notification.read === false).map((item, index) => {
                 return (
@@ -34,7 +34,7 @@ function Notifications() {
         {/* Earlier notifications container */}
         <div className='pb-4 border-b border-zinc-800 mt-4'>
           <p className='text-lg font-semibold text-zinc-100'>Earlier</p>
-          <div className='mt-5 flex flex-col gap-2'>
+          <div className='mt-5 flex flex-col'>
             {
               notifications.filter(notification => notification.read === true).map((item, index) => {
                 return (
