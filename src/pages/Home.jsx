@@ -24,7 +24,7 @@ function Home() {
         <div className={`h-screen w-72 max-[1350px]:w-[72px] border-r border-zinc-800 max-md:hidden px-3 pt-6 pb-5 flex flex-col justify-between`}>
           {/* Home left menu upper section */}
           <div className='flex flex-col'>
-            <NavLink to={'/'} className='w-full flex items-center gap-1 hover:cursor-pointer'>
+            <NavLink to={"/"} className='w-full flex items-center gap-1 hover:cursor-pointer select-none'>
               <div className={`hidden max-[1350px]:block`}>
                 <div className='h-11 w-12 rounded-lg flex justify-center items-center'>
                   <FontAwesomeIcon

@@ -118,8 +118,8 @@ function Feed() {
           <ISCL link={'https://about.instagram.com/about-us/careers'} title={'Jobs'} />
           <ISCL link={'https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect'} title={'Privacy'} />
           <ISCL link={'https://help.instagram.com/581066165581870/'} title={'Terms'} />
-          <ISCL link={'#'} title={'Locations'} />
-          <ISCL link={'#'} title={'Language'} />
+          <ISCL link={'https://about.instagram.com/'} title={'Locations'} />
+          <ISCL link={'https://help.instagram.com/'} title={'Language'} />
           <a className='hover:underline' target='_blank' href="https://accountscenter.instagram.com/meta_verified/?entrypoint=web_footer">Meta Verified</a>
         </div>
         <p className='text-xs text-zinc-500 font-normal uppercase mt-5'>© 2024 Instagram from Meta</p>

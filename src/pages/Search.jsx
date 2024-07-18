@@ -1,9 +1,61 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass, faCircleXmark } from '@fortawesome/free-solid-svg-icons'
+import RecentSearch from '../components/RecentSearch'
+import { dummyPosts } from '../utils/posts'
+import { sliceStr } from '../utils/quickMethods'
 
 function Search() {
+  const [search, setSearch] = useState('')
+
   return (
-    <div>
-      
+    <div className='w-full'>
+      <div className='max-w-[950px] m-auto px-3'>
+        {/* Search bar container */}
+        <div className='flex items-center relative mt-6'>
+          <FontAwesomeIcon
+            icon={faMagnifyingGlass}
+            className='text-xl text-zinc-400 absolute top-[20px] left-[26px]'
+          />
+          <input
+            placeholder='Search'
+            type='text'
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className='w-full px-16 py-4 text-zinc-100 bg-zinc-800 rounded-full outline-none border-none caret-zinc-400'
+          />
+          <FontAwesomeIcon
+            icon={faCircleXmark}
+            onClick={() => setSearch('')}
+            className='text-md text-zinc-400 absolute top-[20px] right-[26px] hover:cursor-pointer'
+          />
+        </div>
+        {/* Recent search container */}
+        <div className='py-6'>
+          <div className='flex justify-between items-center'>
+            <p className='text-md font-medium text-zinc-100'>Recent</p>
+            <p className='text-sm font-medium hover:cursor-pointer text-blue-500'>Clear all</p>
+          </div>
+
+          <div className='mt-5 flex flex-col gap-4'>
+            {
+              dummyPosts.map((item, index) => {
+                return (
+                  <div key={index}>
+                    <RecentSearch
+                      profile={item.photos[0]}
+                      username={item.name}
+                      title={sliceStr(item.description, 45)}
+                      isActiveStory={item.isActiveStory}
+                    />
+                  </div>
+                )
+              })
+            }
+          </div>
+
+        </div>
+      </div>
     </div>
   )
 }

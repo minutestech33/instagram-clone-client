@@ -13,7 +13,7 @@ function Footer() {
                 <NavLink className='text-xs font-normal text-zinc-400 hover:underline' target='_blank' to={'https://developers.facebook.com/docs/instagram-platform'}>API</NavLink>
                 <NavLink className='text-xs font-normal text-zinc-400 hover:underline' target='_blank' to={'https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect'}>Privacy</NavLink>
                 <NavLink className='text-xs font-normal text-zinc-400 hover:underline' target='_blank' to={'https://help.instagram.com/581066165581870/'}>Terms</NavLink>
-                <NavLink className='text-xs font-normal text-zinc-400 hover:underline' target='_blank' to={'#'}>Locations</NavLink>
+                <NavLink className='text-xs font-normal text-zinc-400 hover:underline' target='_blank' to={'https://about.instagram.com/'}>Locations</NavLink>
                 <NavLink className='text-xs font-normal text-zinc-400 hover:underline' target='_blank' to={'https://www.instagram.com/web/lite/'}>Instagram Lite</NavLink>
                 <NavLink className='text-xs font-normal text-zinc-400 hover:underline' target='_blank' to={'https://www.threads.net/'}>Threads</NavLink>
                 <NavLink className='text-xs font-normal text-zinc-400 hover:underline' target='_blank' to={'https://www.facebook.com/help/instagram/261704639352628'}>Contact Uploading & Non-Users</NavLink>
