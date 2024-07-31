@@ -1,6 +1,6 @@
 import React from 'react'
-import { suggested } from '../utils/suggested'
-import SuggestedDetails from '../components/SuggestedDetails'
+import { suggested } from '../../../../utils/suggested'
+import SuggestedDetails from '../../../../components/SuggestedDetails'
 import { NavLink } from 'react-router-dom'
 
 function People() {

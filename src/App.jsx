@@ -1,11 +1,11 @@
 import React from 'react'
-import Home from './pages/Home'
-import Explore from './pages/Explore'
-import Profile from './pages/Profile'
-import People from './pages/People'
-import Feed from './pages/Feed'
-import Search from './pages/Search'
-import Notifications from './pages/Notifications'
+import Home from './pages/Home/Routes/Home'
+import Explore from './pages/Home/Subroutes/Explore/Explore'
+import Profile from './pages/Home/Subroutes/Profile/Profile'
+import People from './pages/Home/Subroutes/People/People'
+import Feed from './pages/Home/Subroutes/Feed/Feed'
+import Search from './pages/Home/Subroutes/Search/Search'
+import Notifications from './pages/Home/Subroutes/Notifications/Notifications'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {

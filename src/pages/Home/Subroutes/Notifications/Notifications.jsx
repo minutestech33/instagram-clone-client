@@ -1,6 +1,6 @@
 import React from 'react'
-import { notifications } from '../utils/notifications'
-import Notification from '../components/Notification'
+import { notifications } from '../../../../utils/notifications'
+import Notification from '../../../../components/Notification'
 
 function Notifications() {
   return (

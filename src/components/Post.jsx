@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEllipsis, faHeart as faHeartFull, faCircleChevronLeft, faCircleChevronRight, faStar, faL } from '@fortawesome/free-solid-svg-icons'
+import { faEllipsis, faHeart as faHeartFull, faCircleChevronLeft, faCircleChevronRight, faStar } from '@fortawesome/free-solid-svg-icons'
 import { faHeart, faComment, faPaperPlane, faBookmark, faFaceSmile } from '@fortawesome/free-regular-svg-icons'
-import { sliceStr } from '../utils/quickMethods'
 import { DesignContext } from '../context/DesignContent'
+import { useSliceStr } from '../hooks/useSliceStr'
 
 function Post({ id, name, created, photos, likes, isActiveStory, comments, shares, tags, credit, description }) {
     const [isMore, setIsMore] = useState(false)
@@ -140,7 +140,7 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                     ) : (
                         <p className='text-sm font-normal text-zinc-100 mt-3'>
                             {
-                                `${sliceStr(description, 100)}`
+                                `${useSliceStr({text: description, length: 100})}`
                             }
                             {
                                 description.length > 100 && <span onClick={() => setIsMore(isMore => !isMore)} className='text-sm font-medium text-zinc-400 hover:cursor-pointer'> more</span>

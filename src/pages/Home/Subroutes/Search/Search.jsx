@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faCircleXmark } from '@fortawesome/free-solid-svg-icons'
-import RecentSearch from '../components/RecentSearch'
-import { dummyPosts } from '../utils/posts'
-import { sliceStr } from '../utils/quickMethods'
+import RecentSearch from '../../../../components/RecentSearch'
+import { dummyPosts } from '../../../../utils/posts'
+import { useSliceStr } from '../../../../hooks/useSliceStr'
 
 function Search() {
   const [search, setSearch] = useState('')
@@ -47,7 +47,7 @@ function Search() {
                         <RecentSearch
                           profile={item.photos[0]}
                           username={item.name}
-                          title={sliceStr(item.description, 45)}
+                          title={useSliceStr({text: item.description, length: 45})}
                           isActiveStory={item.isActiveStory}
                         />
                       </div>

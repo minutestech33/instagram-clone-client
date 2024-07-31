@@ -1,15 +1,15 @@
 import React, { useContext, useState } from 'react'
-import SuggustedProfile from '../components/SuggustedProfile'
-import ISCL from '../components/ISCL'
-import { stories } from '../utils/story'
-import { sliceStr } from '../utils/quickMethods'
+import SuggustedProfile from '../../../../components/SuggustedProfile'
+import ISCL from '../../../../components/ISCL'
+import { stories } from '../../../../utils/story'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleChevronLeft, faCircleChevronRight } from '@fortawesome/free-solid-svg-icons'
-import Post from '../components/Post'
-import { dummyPosts } from '../utils/posts'
+import Post from '../../../../components/Post'
+import { dummyPosts } from '../../../../utils/posts'
 import { NavLink } from 'react-router-dom'
-import { DesignContext } from '../context/DesignContent'
-import Footer from '../components/Footer'
+import { DesignContext } from '../../../../context/DesignContent'
+import Footer from '../../../../components/Footer'
+import { useSliceStr } from '../../../../hooks/useSliceStr'
 
 function Feed() {
   const [storyObsolete, setStoryObsolete] = useState(0)
@@ -23,39 +23,41 @@ function Feed() {
       {/* Home feed section */}
       <div className='w-[636px] max-md:w-full h-max mt-9 max-md:mt-0'>
         {/* Home story section */}
-        <div className='w-full flex max-md:px-[6.5px] items-center relative select-none overflow-x-scroll no-scrollbar border-zinc-800 max-md:border-b max-md:py-3'>
-          {
-            stories.map((item, index) => {
-              return (
-                <div key={index} className='flex-shrink-0 w-[79.6px] flex justify-center transition-transform ease-in-out duration-300' style={{ transform: `translateX(-${storyObsolete * 100}%)` }}>
-                  <div className='flex flex-col justify-center items-center gap-1 hover:cursor-pointer'>
-                    <div style={{ padding: '2px' }} className='flex justify-center items-center bg-gradient-to-r from-fuchsia-400 from-10% via-amber-400 via-30% to-rose-400 to-90% rounded-full'>
-                      <img src={item.profile} className='w-16 h-16 object-cover rounded-full border-4 border-black' />
+        <div className='relative w-full'>
+          <div className='w-full flex max-md:px-[6.5px] items-center select-none overflow-x-scroll no-scrollbar border-zinc-800 max-md:border-b max-md:py-3'>
+            {
+              stories.map((item, index) => {
+                return (
+                  <div key={index} className='flex-shrink-0 w-[79.6px] flex justify-center transition-transform ease-in-out duration-300' style={{ transform: `translateX(-${storyObsolete * 100}%)` }}>
+                    <div className='flex flex-col justify-center items-center gap-1 hover:cursor-pointer'>
+                      <div style={{ padding: '2px' }} className='flex justify-center items-center bg-gradient-to-r from-fuchsia-400 from-10% via-amber-400 via-30% to-rose-400 to-90% rounded-full'>
+                        <img src={item.profile} className='w-16 h-16 object-cover rounded-full border-4 border-black' />
+                      </div>
+                      <p className='text-xs font-normal'>{useSliceStr({ text: item.name, length: 9 })}</p>
                     </div>
-                    <p className='text-xs font-normal'>{sliceStr(item.name, 9)}</p>
                   </div>
-                </div>
+                )
+              })
+            }
+            {
+              storyObsolete !== 0 && (
+                <FontAwesomeIcon
+                  icon={faCircleChevronLeft}
+                  onClick={goToPrev}
+                  className='text-2xl max-[670px]:hidden absolute top-6 max-md:top-10 left-5 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110'
+                />
               )
-            })
-          }
-          {
-            storyObsolete !== 0 && (
-              <FontAwesomeIcon
-                icon={faCircleChevronLeft}
-                onClick={goToPrev}
-                className='text-2xl max-[670px]:hidden absolute top-6 max-md:top-10 left-5 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110'
-              />
-            )
-          }
-          {
-            storyObsolete !== stories.length - 8 && (
-              <FontAwesomeIcon
-                icon={faCircleChevronRight}
-                onClick={goToNext}
-                className='text-2xl max-[670px]:hidden absolute top-6 max-md:top-10 right-5 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110'
-              />
-            )
-          }
+            }
+            {
+              storyObsolete !== stories.length - 8 && (
+                <FontAwesomeIcon
+                  icon={faCircleChevronRight}
+                  onClick={goToNext}
+                  className='text-2xl max-[670px]:hidden absolute top-6 max-md:top-10 right-5 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110'
+                />
+              )
+            }
+          </div>
         </div>
         {/* Home main feed (all single feed) section */}
         <div className='w-full h-max mt-4 max-md:mt-0 flex flex-col items-center justify-center divide-y divide-zinc-700'>

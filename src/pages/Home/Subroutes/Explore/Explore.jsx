@@ -1,8 +1,8 @@
 import React from 'react'
-import { explore } from '../utils/explore'
+import { explore } from '../../../../utils/explore'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment, faLayerGroup } from '@fortawesome/free-solid-svg-icons'
-import Footer from '../components/Footer'
+import Footer from '../../../../components/Footer'
 
 function Explore() {
   return (
