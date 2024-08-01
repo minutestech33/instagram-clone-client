@@ -30,7 +30,7 @@ function Notifications() {
         </div>
 
         {/* Earlier notifications container */}
-        <div className='pb-4 border-b border-zinc-800 mt-4'>
+        <div className='pb-4 mt-4'>
           <p className='text-lg font-semibold text-zinc-100'>Earlier</p>
           <div className='mt-5 flex flex-col'>
             {
