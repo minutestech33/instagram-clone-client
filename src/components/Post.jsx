@@ -117,7 +117,7 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                                 {
                                     tags.map((item, index) => {
                                         return (
-                                        <li key={index} className='text-sm text-blue-500 mr-1 font-normal'>{item}</li>
+                                            <li key={index} className='text-sm text-blue-500 mr-1 font-normal'>{item}</li>
                                         )
                                     })
                                 }
@@ -128,9 +128,7 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                             {
                                 `${useSliceStr({ text: description, length: 100 })}`
                             }
-                            {
-                                description.length > 100 && <span onClick={() => setIsMore(isMore => !isMore)} className='text-sm font-medium text-zinc-400 hover:cursor-pointer'> more</span>
-                            }
+                            <span onClick={() => setIsMore(isMore => !isMore)} className='text-sm font-medium text-zinc-400 hover:cursor-pointer'>{description.length < 100 && '...'} more</span>
                         </p>
                     )
                 }
