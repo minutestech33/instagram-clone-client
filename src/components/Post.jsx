@@ -110,16 +110,16 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                 {
                     isMore ? (
                         <div className='w-full'>
-                            <div className='flex items-center gap-2 mt-1'>
-                                <p className='text-sm font-medium text-zinc-100'>joinuniversitymeta</p>
-                                <p className='text-sm font-normal text-zinc-100'>Git vs Github</p>
+                            <div className='flex items-center gap-2 mt-1 w-full'>
+                                <p className='text-sm font-medium w-max text-zinc-100'>joinuniversitymeta</p>
+                                <p className='text-sm font-normal w-max text-zinc-100'>Git vs Github</p>
                             </div>
-                            <div className='flex items-center gap-2 mt-4'>
-                                <p className='text-sm font-medium text-zinc-100'>Credit: </p>
-                                <p className='text-sm font-normal text-zinc-100'>{credit}</p>
+                            <div className='flex items-center gap-2 mt-4 w-full'>
+                                <p className='text-sm font-medium w-max text-zinc-100'>Credit: </p>
+                                <p className='text-sm font-normal w-max text-zinc-100'>{credit}</p>
                             </div>
-                            <p className='text-sm font-normal text-zinc-100 mt-3'>{description}</p>
-                            <div className='flex flex-wrap items-center gap-1 mt-4'>
+                            <p className='text-sm w-full font-normal text-zinc-100 mt-3'>{description}</p>
+                            <div className='w-full flex flex-wrap items-center gap-1 mt-4'>
                                 {
                                     tags.map((item, index) => {
                                         return (
