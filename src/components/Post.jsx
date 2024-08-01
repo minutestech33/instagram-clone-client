@@ -109,21 +109,21 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                 <p className='text-sm font-medium text-zinc-100 mt-3'>Liked by yaswanth_yash_430 and others</p>
                 {
                     isMore ? (
-                        <div className='w-full'>
-                            <div className='flex items-center gap-2 mt-1 w-full'>
-                                <p className='text-sm font-medium w-max text-zinc-100'>joinuniversitymeta</p>
-                                <p className='text-sm font-normal w-max text-zinc-100'>Git vs Github</p>
+                        <div className='w-full bg-slate-600'>
+                            <div className='flex items-center gap-2 mt-1 w-full bg-green-500'>
+                                <p className='text-sm font-medium w-max text-zinc-100 bg-green-400'>joinuniversitymeta</p>
+                                <p className='text-sm font-normal w-max text-zinc-100 bg-green-600'>Git vs Github</p>
                             </div>
-                            <div className='flex items-center gap-2 mt-4 w-full'>
-                                <p className='text-sm font-medium w-max text-zinc-100'>Credit: </p>
-                                <p className='text-sm font-normal w-max text-zinc-100'>{credit}</p>
+                            <div className='flex items-center gap-2 mt-4 w-full bg-blue-500'>
+                                <p className='text-sm font-medium w-max text-zinc-100 bg-blue-400'>Credit: </p>
+                                <p className='text-sm font-normal w-max text-zinc-100 bg-blue-600'>{credit}</p>
                             </div>
-                            <p className='text-sm w-full font-normal text-zinc-100 mt-3'>{description}</p>
-                            <div className='w-full flex flex-wrap items-center gap-1 mt-4'>
+                            <p className='text-sm w-full font-normal text-zinc-100 mt-3 bg-yellow-500'>{description}</p>
+                            <div className='w-full flex flex-wrap items-center gap-1 mt-4 bg-emerald-500'>
                                 {
                                     tags.map((item, index) => {
                                         return (
-                                            <span key={index} className='text-sm w-max font-normal text-zinc-100 leading-4'>{item}</span>
+                                            <span key={index} className='text-sm w-max font-normal bg-emerald-600 text-zinc-100 leading-4'>{item}</span>
                                         )
                                     })
                                 }
