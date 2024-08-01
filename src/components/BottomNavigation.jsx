@@ -1,38 +1,33 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useContext } from 'react'
-import { NavLink } from 'react-router-dom'
-import { faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons'
-import { faCompass, faSquarePlus, faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons'
 import { DesignContext } from '../context/DesignContent'
-
-function BottomIcon({ icon, link }) {
-    return (
-        <NavLink to={link} className='h-11 w-11 flex justify-center items-center rounded-md'>
-            <FontAwesomeIcon
-                icon={icon}
-                className='text-2xl text-zinc-100 active:scale-95'
-            />
-        </NavLink>
-    )
-}
+import { bottomNavigationOptions } from '../utils/LinkOptions'
+import { useNavigate } from 'react-router-dom'
 
 function BottomNavigation() {
-    const {setShowCreatePost} = useContext(DesignContext) 
+    const { setShowCreatePost } = useContext(DesignContext);
+    const navigate = useNavigate()
+    const bottomIconHandler = (link, title) => {
+        navigate(link);
+        title === 'Create' && setShowCreatePost(true)
+    }
     return (
-        <div className='w-full h-full flex justify-between items-center px-3'>
-            <BottomIcon icon={faEnvelopeOpen} link={'/'} />
-            <BottomIcon icon={faMagnifyingGlass} link={'/search'} />
-            <FontAwesomeIcon
-                icon={faSquarePlus}
-                onClick={() => setShowCreatePost(true)}
-                className='text-2xl text-zinc-100 active:scale-95'
-            />
-            <BottomIcon icon={faCompass} link={'/explore'} />
-            <BottomIcon icon={faUser} link={'/explore/people'} />
-            <NavLink to={'/shuvopal89'} className='h-11 w-11 flex justify-center items-center rounded-md'>
-                <img src="https://pics.craiyon.com/2023-07-15/dc2ec5a571974417a5551420a4fb0587.webp" className='h-6 w-6 select-none rounded-full object-cover active:scale-95' alt="" />
-            </NavLink>
-        </div>
+        <>
+            <div className='w-full h-full flex justify-between items-center px-3'>
+                {
+                    bottomNavigationOptions.map((item, index) =>
+                        item.title === 'Profile' ?
+                            <img onClick={() => navigate('/shuvopal89')} src="https://pics.craiyon.com/2023-07-15/dc2ec5a571974417a5551420a4fb0587.webp" className='h-6 w-6 select-none rounded-full object-cover active:scale-95' alt="" />
+                            :
+                            <FontAwesomeIcon
+                                key={index}
+                                onClick={() => bottomIconHandler(item.link, item.title)}
+                                icon={item.icon}
+                                className='text-2xl text-zinc-100 active:scale-95'
+                            />)
+                }
+            </div>
+        </>
     )
 }
 

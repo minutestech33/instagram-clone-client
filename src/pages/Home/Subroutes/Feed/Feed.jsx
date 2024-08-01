@@ -10,6 +10,7 @@ import { NavLink } from 'react-router-dom'
 import { DesignContext } from '../../../../context/DesignContent'
 import Footer from '../../../../components/Footer'
 import { useSliceStr } from '../../../../hooks/useSliceStr'
+import { footerOptions } from '../../../../utils/LinkOptions'
 
 function Feed() {
   const [storyObsolete, setStoryObsolete] = useState(0)
@@ -20,9 +21,7 @@ function Feed() {
 
   return (
     <div className='w-full flex justify-center gap-20'>
-      {/* Home feed section */}
       <div className='w-[636px] max-md:w-full h-max mt-9 max-md:mt-0'>
-        {/* Home story section */}
         <div className='relative w-full'>
           <div className='w-full flex max-md:px-[6.5px] items-center select-none overflow-x-scroll no-scrollbar border-zinc-800 max-md:border-b max-md:py-3'>
             {
@@ -59,7 +58,6 @@ function Feed() {
             }
           </div>
         </div>
-        {/* Home main feed (all single feed) section */}
         <div className='w-full h-max mt-4 max-md:mt-0 flex flex-col items-center justify-center divide-y divide-zinc-700'>
           {
             dummyPosts.map((post, index) => {
@@ -85,9 +83,7 @@ function Feed() {
         </div>
         <Footer />
       </div>
-      {/* Home your profile and suggestion profile section  */}
       <div className='w-[300px] h-max mt-9 max-[1150px]:hidden'>
-        {/* Home profile section */}
         <div className='flex items-center justify-between'>
           <div className='flex items-start gap-3'>
             <img src="https://pics.craiyon.com/2023-07-15/dc2ec5a571974417a5551420a4fb0587.webp" className='h-11 select-none w-11 rounded-full object-cover hover:cursor-pointer' alt="" />
@@ -98,12 +94,10 @@ function Feed() {
           </div>
           <p onClick={() => setShowSwitch(true)} className='text-xs text-blue-500 font-normal hover:cursor-pointer hover:text-zinc-100'>Switch</p>
         </div>
-        {/* Home suggested profile header section */}
         <div className='mt-6 flex justify-between items-center'>
           <p className='text-sm font-medium text-zinc-400'>Suggested for you</p>
           <NavLink to="/explore/people" className='text-xs text-zinc-100 font-medium hover:cursor-pointer hover:text-blue-500'>See All</NavLink>
         </div>
-        {/* Home main suggested profile section */}
         <div className='mt-4 flex flex-col gap-4'>
           <SuggustedProfile name={'anglenila7'} />
           <SuggustedProfile name={'r_ahaaaaa12'} />
@@ -111,18 +105,11 @@ function Feed() {
           <SuggustedProfile name={'ra.ika9492'} />
           <SuggustedProfile name={'posted_by_sanamm'} />
         </div>
-        {/* Home suggested profile and your profile bottom section */}
         <div className='mt-10 flex items-center gap-1 flex-wrap font-normal text-xs text-zinc-500'>
-          <ISCL link={'https://about.instagram.com/'} title={'About'} />
-          <ISCL link={'https://help.instagram.com/'} title={'Help'} />
-          <ISCL link={'https://about.instagram.com/blog'} title={'Press'} />
-          <ISCL link={'https://developers.facebook.com/docs/instagram-platform'} title={'API'} />
-          <ISCL link={'https://about.instagram.com/about-us/careers'} title={'Jobs'} />
-          <ISCL link={'https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect'} title={'Privacy'} />
-          <ISCL link={'https://help.instagram.com/581066165581870/'} title={'Terms'} />
-          <ISCL link={'https://about.instagram.com/'} title={'Locations'} />
-          <ISCL link={'https://help.instagram.com/'} title={'Language'} />
-          <a className='hover:underline' target='_blank' href="https://accountscenter.instagram.com/meta_verified/?entrypoint=web_footer">Meta Verified</a>
+          {
+            footerOptions.slice(1, 11).map((item, index) =>
+              <ISCL key={index} link={item.link} title={item.title} />)
+          }
         </div>
         <p className='text-xs text-zinc-500 font-normal uppercase mt-5'>© 2024 Instagram from Meta</p>
       </div>

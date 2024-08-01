@@ -13,8 +13,6 @@ function Explore() {
             return (
               <div key={index} className='w-full relative group'>
                 <img src={item.photos[0]} className='w-full max-lg:w-80 h-80 max-md:w-52 max-md:h-52 max-sm:w-32 max-sm:h-32 object-cover' alt="" />
-
-                {/* When hovering on images */}
                 <div className='w-full h-full invisible group-hover:visible group-hover:cursor-pointer bg-black/30 absolute top-0 left-0 flex justify-center items-center gap-3 z-20'>
                   <FontAwesomeIcon
                     icon={faComment}

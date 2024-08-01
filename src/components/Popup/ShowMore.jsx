@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import SingleMoreLink from '../SingleMoreLink'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThreads } from '@fortawesome/free-brands-svg-icons'
-import { faChartLine, faCircleExclamation, faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import { faSun, faBookmark } from '@fortawesome/free-regular-svg-icons'
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 import { DesignContext } from '../../context/DesignContent'
+import { showMoreOptions } from '../../utils/LinkOptions'
 
 function ShowMore() {
     const { setShowMore, setShowSwitch } = useContext(DesignContext)
@@ -15,10 +15,10 @@ function ShowMore() {
             <div className='w-full h-screen relative parent' onClick={moreHandler}>
                 <div className='w-64 h-max bg-zinc-800 rounded-2xl absolute left-4 bottom-[74px] divide-y-4 divide-zinc-700'>
                     <div className='w-full flex flex-col gap-1 p-3 rounded-t-2xl'>
-                        <SingleMoreLink icon={faSun} title={'Settings'} link={'#'} />
-                        <SingleMoreLink icon={faChartLine} title={'Your activity'} link={'#'} />
-                        <SingleMoreLink icon={faBookmark} title={'Saved'} link={'#'} />
-                        <SingleMoreLink icon={faCircleExclamation} title={'Report a problem'} link={'#'} />
+                        {
+                            showMoreOptions.map((item, index) =>
+                                <SingleMoreLink key={index} icon={item.icon} title={item.title} link={item.link} />)
+                        }
                     </div>
                     <div className='w-full p-3'>
                         <NavLink target='_blank' to={"https://www.threads.net/"} className='flex items-center justify-between p-4 rounded-lg hover:cursor-pointer hover:bg-zinc-700 group'>

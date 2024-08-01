@@ -2,6 +2,7 @@ import React from 'react'
 import { suggested } from '../../../../utils/suggested'
 import SuggestedDetails from '../../../../components/SuggestedDetails'
 import { NavLink } from 'react-router-dom'
+import { footerOptions } from '../../../../utils/LinkOptions'
 
 function People() {
   return (
@@ -26,13 +27,10 @@ function People() {
       </div>
       <div className='w-full flex flex-col justify-center items-center gap-2 mt-24 pb-6'>
         <div className='flex items-start gap-4'>
-          <NavLink className='text-xs font-medium hover:underline' target='_blank' to={'https://about.instagram.com/'}>ABOUT</NavLink>
-          <NavLink className='text-xs font-medium hover:underline' target='_blank' to={'https://help.instagram.com/'}>HELP</NavLink>
-          <NavLink className='text-xs font-medium hover:underline' target='_blank' to={'https://about.instagram.com/blog'}>PRESS</NavLink>
-          <NavLink className='text-xs font-medium hover:underline' target='_blank' to={'https://developers.facebook.com/docs/instagram-platform'}>API</NavLink>
-          <NavLink className='text-xs font-medium hover:underline' target='_blank' to={'https://about.instagram.com/about-us/careers'}>JOBS</NavLink>
-          <NavLink className='text-xs font-medium hover:underline' target='_blank' to={'https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect'}>PRIVACY</NavLink>
-          <NavLink className='text-xs font-medium hover:underline' target='_blank' to={'https://help.instagram.com/581066165581870/'}>TERMS</NavLink>
+          {
+            footerOptions.slice(0, 7).map((item, index) =>
+              <NavLink key={index} className='text-xs uppercase font-medium hover:underline' target='_blank' to={item.link}>{item.title}</NavLink>)
+          }
         </div>
         <div className='flex items-start gap-4'>
           <NavLink className='text-xs font-medium hover:underline' target='_blank' to={'#'}>LOCATIONS</NavLink>

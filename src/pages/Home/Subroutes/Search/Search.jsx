@@ -11,7 +11,6 @@ function Search() {
   return (
     <div className='w-full'>
       <div className='max-w-[950px] m-auto px-3'>
-        {/* Search bar container */}
         <div className='flex items-center relative mt-6'>
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
@@ -30,7 +29,6 @@ function Search() {
             className='text-md text-zinc-400 absolute top-[16px] right-[20px] hover:cursor-pointer'
           />
         </div>
-        {/* Recent search container */}
         <div className='py-6'>
           <div className='flex justify-between items-center'>
             <p className='text-md font-medium text-zinc-100'>Recent</p>
@@ -47,7 +45,7 @@ function Search() {
                         <RecentSearch
                           profile={item.photos[0]}
                           username={item.name}
-                          title={useSliceStr({text: item.description, length: 45})}
+                          title={useSliceStr({ text: item.description, length: 45 })}
                           isActiveStory={item.isActiveStory}
                         />
                       </div>
@@ -61,7 +59,6 @@ function Search() {
               </div>
             )
           }
-
         </div>
       </div>
     </div>

@@ -17,7 +17,6 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
 
     return (
         <div className='max-w-[470px] h-max'>
-            {/* Single post header section */}
             <div className='w-full mt-3 flex justify-between items-center max-sm:px-3'>
                 <div className='flex items-center gap-2'>
                     {
@@ -46,7 +45,6 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                     />
                 </div>
             </div>
-            {/* Single post main photo container/section */}
             <div className='relative mt-3 w-full border border-zinc-800 max-sm:border-l-0 max-sm:border-r-0 rounded-sm flex overflow-hidden'>
                 {
                     photos.map((photo, index) => {
@@ -83,7 +81,6 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                     )
                 }
             </div>
-            {/* Single post like/commen/share/saved container */}
             <div className='w-full max-sm:px-3'>
                 <div className='w-full flex items-center justify-between mt-4'>
                     <div className='flex items-center gap-4'>
@@ -109,9 +106,7 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                         className='text-2xl text-zinc-100 hover:text-zinc-400 hover:cursor-pointer active:scale-90'
                     />
                 </div>
-                {/* Single post likes people section */}
                 <p className='text-sm font-medium text-zinc-100 mt-3'>Liked by yaswanth_yash_430 and others</p>
-                {/* Single post title section ---------------------------------------- */}
                 {
                     isMore ? (
                         <div>
@@ -119,14 +114,11 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                                 <p className='text-sm font-medium text-zinc-100'>joinuniversitymeta</p>
                                 <p className='text-sm font-normal text-zinc-100'>Git vs Github</p>
                             </div>
-                            {/* Single post credit section */}
                             <div className='flex items-center gap-2 mt-4'>
                                 <p className='text-sm font-medium text-zinc-100'>Credit: </p>
                                 <p className='text-sm font-normal text-zinc-100'>{credit}</p>
                             </div>
-                            {/* Single post description section */}
                             <p className='text-sm font-normal text-zinc-100 mt-3'>{description}</p>
-                            {/* Single post tags section */}
                             <div className='flex flex-wrap items-center gap-1 mt-4'>
                                 {
                                     tags.map((item, index) => {
@@ -140,7 +132,7 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                     ) : (
                         <p className='text-sm font-normal text-zinc-100 mt-3'>
                             {
-                                `${useSliceStr({text: description, length: 100})}`
+                                `${useSliceStr({ text: description, length: 100 })}`
                             }
                             {
                                 description.length > 100 && <span onClick={() => setIsMore(isMore => !isMore)} className='text-sm font-medium text-zinc-400 hover:cursor-pointer'> more</span>
@@ -148,9 +140,7 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                         </p>
                     )
                 }
-                {/* View all comments title ------------------------------------------ */}
                 <p className='text-sm font-normal text-zinc-400 mt-3 hover:cursor-pointer'>{`View all ${comments.length} comments`}</p>
-                {/* Place comment section */}
                 <div className='w-full flex items-center gap-3 mb-2'>
                     <input type='text' placeholder="Add a comment..." className='w-full py-2 border-none outline-none bg-black placeholder:text-zinc-400 font-normal text-sm text-zinc-100' onChange={(e) => setComment(e.target.value)} />
                     {
