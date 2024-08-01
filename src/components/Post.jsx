@@ -118,12 +118,12 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                                 <p className='text-sm font-medium w-max text-zinc-100'>Credit: </p>
                                 <p className='text-sm font-normal w-max text-zinc-100'>{credit}</p>
                             </div>
-                            <p className='text-sm font-normal text-zinc-100 mt-3'>{description}</p>
-                            <div className='flex flex-wrap items-center gap-1 mt-4'>
+                            <p className='text-sm w-full font-normal text-zinc-100 mt-3'>{description}</p>
+                            <div className='w-full flex flex-wrap items-center gap-1 mt-4'>
                                 {
                                     tags.map((item, index) => {
                                         return (
-                                            <span key={index} className='text-sm font-normal text-zinc-100 leading-4'>{item}</span>
+                                            <span key={index} className='text-sm w-max font-normal text-zinc-100 leading-4'>{item}</span>
                                         )
                                     })
                                 }
