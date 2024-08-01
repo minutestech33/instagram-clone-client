@@ -45,13 +45,13 @@ function Home() {
           </div>
         </div>
         <div className='h-screen w-full text-zinc-100 overflow-y-scroll'>
-          <div className='w-full sticky top-0 h-10 z-10 bg-black hidden max-md:block border-b border-zinc-800'>
+          <div className='w-full sticky top-0 h-[50px] z-10 bg-black hidden max-md:block border-b border-zinc-800'>
             <Header />
           </div>
           <div className='w-full'>
             <Outlet />
           </div>
-          <div className='w-full fixed bottom-0 bg-black h-10 hidden max-md:block border-t border-zinc-800'>
+          <div className='w-full fixed bottom-0 bg-black h-[50px] hidden max-md:block border-t border-zinc-800'>
             <BottomNavigation />
           </div>
         </div>
