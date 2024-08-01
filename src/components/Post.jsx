@@ -121,28 +121,28 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                                         )
                                     })
                                 } */}
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#ashdghga</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#asdsfassagsag</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#sgaggas</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#asgsagasgasga</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#asgasgaga</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#asgasgasga</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#asgasasgasg</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#dfffd</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#sdsdsds</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#gdgsdhs</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#shsdsdh</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#ashdgh4reyerga</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#sdgsdds</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#sdgsdsdg</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#sgsdg</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#sdgsd</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#ashdghga</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#sdgsdsddd</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#sdgsdgsdgsd</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#sdgsdgsdgsdgsd</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#sdgsdgsdgsdgsd</li>
-                                <li className='text-sm text-blue-500 mr-1 font-normal'>#sdgsdgsdg</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>ashdghga</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>asdsfassagsag</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>sgaggas</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>asgsagasgasga</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>asgasgaga</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>asgasgasga</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>asgasasgasg</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>dfffd</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>sdsdsds</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>gdgsdhs</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>shsdsdh</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>ashdgh4reyerga</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>sdgsdds</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>sdgsdsdg</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>sgsdg</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>sdgsd</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>ashdghga</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>sdgsdsddd</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>sdgsdgsdgsd</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>sdgsdgsdgsdgsd</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>sdgsdgsdgsdgsd</li>
+                                <li className='text-sm text-blue-500 mr-1 font-normal'>sdgsdgsdg</li>
                             </ul>
                         </div>
                     ) : (
