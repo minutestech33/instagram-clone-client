@@ -12,13 +12,13 @@ export const postMoreOptions = [
 ]
 
 export const singleMenuOptions = [
-    { icon: faMagnifyingGlass, title: 'Home', link: '/' },
-    { icon: faHeart, title: 'Search', link: '/search' },
+    { icon: faEnvelopeOpen, title: 'Home', link: '/' },
+    { icon: faMagnifyingGlass, title: 'Search', link: '/search' },
     { icon: faCompass, title: 'Explore', link: '/explore' },
-    { icon: faSquarePlus, title: 'Notifications', link: '/notifications' },
-    { icon: faEnvelopeOpen, title: 'Create', },
+    { icon: faHeart, title: 'Notifications', link: '/notifications' },
+    { icon: faSquarePlus, title: 'Create' },
     { title: 'Profile' },
-    { icon: faBars, title: 'More', },
+    { icon: faBars, title: 'More' },
 ]
 
 export const bottomNavigationOptions = [

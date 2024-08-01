@@ -48,8 +48,10 @@ function Home() {
           <div className='w-full sticky top-0 h-10 z-10 bg-black hidden max-md:block border-b border-zinc-800'>
             <Header />
           </div>
-          <div className='w-full'><Outlet /></div>
-          <div className='w-full h-10 hidden max-md:block border-t border-zinc-800'>
+          <div className='w-full'>
+            <Outlet />
+          </div>
+          <div className='w-full fixed bottom-0 bg-black h-10 hidden max-md:block border-t border-zinc-800'>
             <BottomNavigation />
           </div>
         </div>
