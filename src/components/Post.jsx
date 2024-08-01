@@ -117,7 +117,7 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                                 {
                                     tags.map((item, index) => {
                                         return (
-                                            <p key={index} className='text-sm w-max mr-1 font-normal text-zinc-100'>{item}</p>
+                                            <p key={index} className='text-sm flex-shrink-0 mr-1 font-normal text-zinc-100'>{item}</p>
                                         )
                                     })
                                 }
