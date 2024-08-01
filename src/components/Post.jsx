@@ -113,15 +113,15 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                             <p className='text-sm mt-2 font-normal text-zinc-100'><span className='font-medium'>joinuniversitymeta</span> Git vs Github</p>
                             <p className='text-sm mt-3 font-normal text-zinc-100'><span className='font-medium'>Credit:</span> {credit}</p>
                             <p className='text-sm font-normal text-zinc-100 mt-3'>{description}</p>
-                            <div className='w-full flex items-center flex-wrap mt-4'>
+                            <ul className='w-full flex items-center flex-wrap mt-4'>
                                 {
                                     tags.map((item, index) => {
                                         return (
-                                        <p key={index} className='text-sm text-blue-500 flex-shrink-0 mr-1 font-normal'>{item}</p>
+                                        <li key={index} className='text-sm text-blue-500 mr-1 font-normal'>{item}</li>
                                         )
                                     })
                                 }
-                            </div>
+                            </ul>
                         </div>
                     ) : (
                         <p className='text-sm font-normal text-zinc-100 mt-3'>
