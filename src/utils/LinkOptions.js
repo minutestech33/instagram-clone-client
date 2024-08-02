@@ -1,4 +1,4 @@
-import { faMagnifyingGlass, faBars, faChartLine, faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faBars, faChartLine, faCircleExclamation, faTableCells, faUserTag } from '@fortawesome/free-solid-svg-icons'
 import { faHeart, faCompass, faSquarePlus, faUser, faEnvelopeOpen, faSun, faBookmark } from '@fortawesome/free-regular-svg-icons'
 
 export const postMoreOptions = [
@@ -51,4 +51,10 @@ export const footerOptions = [
     { title: 'Threads', link: 'https://www.threads.net/' },
     { title: 'Contact Uploading & Non-Users', link: 'https://www.facebook.com/help/instagram/261704639352628' },
     { title: 'Meta Verified', link: 'https://accountscenter.instagram.com/meta_verified/?entrypoint=web_footer' }
+]
+
+export const profileRouteOptions = [
+    {title: 'POSTS', icon: faTableCells, link: '/shuvopal89'},
+    {title: 'SAVED', icon: faBookmark, link: '/shuvopal89/saved'},
+    {title: 'TAGGED', icon: faUserTag, link: '/shuvopal89/tagged'},
 ]

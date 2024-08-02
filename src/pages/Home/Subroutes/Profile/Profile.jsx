@@ -4,6 +4,9 @@ import { faGear, faCircleChevronLeft, faCircleChevronRight } from '@fortawesome/
 import { faThreads } from '@fortawesome/free-brands-svg-icons'
 import { suggested } from '../../../../utils/suggested'
 import SuggestedProfileInside from '../../../../components/SuggestedProfileInside'
+import { profileRouteOptions } from '../../../../utils/LinkOptions'
+import ProfileRoute from '../../../../components/ProfileRoute'
+import { Outlet } from 'react-router-dom'
 
 function ProfileButton({ children }) {
   return <button className='w-28 py-2 select-none text-sm font-medium rounded-md bg-zinc-700/80 hover:bg-zinc-800'>{children}</button>
@@ -79,7 +82,7 @@ function Profile() {
             </div>
           </div>
         </div>
-        <div className='w-full mt-10'>
+        <div className='w-full mt-10 max-md:mt-8'>
           <div className='w-full flex items-center justify-between max-lg:px-3'>
             <p className='text-md font-medium text-zinc-100'>Suggested for you</p>
             <p className='text-sm font-medium text-blue-500 hover:cursor-pointer'>See all</p>
@@ -109,6 +112,81 @@ function Profile() {
             </div>
           </div>
         </div>
+
+        <div className='w-full border-t bg-black border-zinc-800 mt-10 max-md:mt-8 sticky top-0'>
+          <div className='w-max m-auto flex gap-14'>
+            {
+              profileRouteOptions.map((item, index) =>
+                <ProfileRoute key={index} title={item.title} icon={item.icon} link={item.link} />)
+            }
+          </div>
+        </div>
+
+        <div className='w-full h-max bg-black'>
+          {/* <Outlet /> */}
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+          <h1>Hay</h1>
+        </div>
+
       </div>
     </div>
   )
