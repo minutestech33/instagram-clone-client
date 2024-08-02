@@ -26,7 +26,7 @@ function Profile() {
           <div className='flex items-center gap-5'>
             <div className='w-36 h-36 max-md:w-20 max-md:h-20 relative flex-shrink-0'>
               <img src="https://pics.craiyon.com/2023-07-15/dc2ec5a571974417a5551420a4fb0587.webp" className='h-full w-full select-none rounded-full object-cover hover:cursor-pointer' alt="" />
-              <div className='w-16 h-10 rounded-lg bg-zinc-800 absolute -top-8 left-10 hover:cursor-pointer'>
+              <div className='w-16 h-10 rounded-lg bg-zinc-800 absolute -top-8 left-10 max-md:left-3 hover:cursor-pointer'>
                 <p className='text-xs font-normal text-zinc-400 leading-10 ml-2'>Note...</p>
                 <p className='w-3 h-3 rounded-sm bg-zinc-800 rotate-45 -mt-2 ml-3'></p>
               </div>
