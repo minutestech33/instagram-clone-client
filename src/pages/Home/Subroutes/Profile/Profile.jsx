@@ -123,68 +123,7 @@ function Profile() {
         </div>
 
         <div className='w-full h-max bg-black'>
-          {/* <Outlet /> */}
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
-          <h1>Hay</h1>
+          <Outlet />
         </div>
 
       </div>

@@ -46,7 +46,7 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                 </div>
             </div>
             <div className='relative'>
-                <div className=' mt-3 w-full border border-zinc-800 max-sm:border-l-0 max-sm:border-r-0 rounded-sm flex overflow-hidden overflow-x-scroll no-scrollbar'>
+                <div className=' mt-3 w-full border border-zinc-800 max-sm:border-l-0 max-sm:border-r-0 rounded-sm flex overflow-hidden'>
                     {
                         photos.map((photo, index) => {
                             return (
