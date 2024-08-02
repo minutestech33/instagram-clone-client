@@ -45,41 +45,43 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, share
                     />
                 </div>
             </div>
-            <div className='relative mt-3 w-full border border-zinc-800 max-sm:border-l-0 max-sm:border-r-0 rounded-sm flex overflow-hidden'>
-                {
-                    photos.map((photo, index) => {
-                        return (
-                            <div key={index} className='flex-shrink-0 w-full select-none h-max flex justify-center transition-transform ease-in-out duration-300' style={{ transform: `translateX(-${currentPhoto * 100}%)` }}>
-                                <img className='w-max h-[550px] object-contain' src={photo} alt="" />
-                            </div>
+            <div className='relative'>
+                <div className=' mt-3 w-full border border-zinc-800 max-sm:border-l-0 max-sm:border-r-0 rounded-sm flex overflow-hidden overflow-x-scroll no-scrollbar'>
+                    {
+                        photos.map((photo, index) => {
+                            return (
+                                <div key={index} className='flex-shrink-0 w-full select-none h-max flex justify-center transition-transform ease-in-out duration-300' style={{ transform: `translateX(-${currentPhoto * 100}%)` }}>
+                                    <img className='w-full h-[500px] object-cover' src={photo} alt="" />
+                                </div>
+                            )
+                        })
+                    }
+                    {
+                        photos.length > 1 && (
+                            <>
+                                <FontAwesomeIcon
+                                    icon={faCircleChevronLeft}
+                                    onClick={goToPrev}
+                                    className={`text-2xl absolute top-1/2 left-3 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110 ${currentPhoto === 0 && 'invisible'}`}
+                                />
+                                <FontAwesomeIcon
+                                    icon={faCircleChevronRight}
+                                    onClick={goToNext}
+                                    className={`text-2xl absolute top-1/2 right-3 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110 ${currentPhoto === photos.length - 1 && 'invisible'}`}
+                                />
+                                <div className='absolute bottom-4 w-full flex items-center justify-center gap-1'>
+                                    {
+                                        photos.map((_, index) => {
+                                            return (
+                                                <span key={index} className={`bg-zinc-100 rounded-md ${currentPhoto === index ? '' : 'opacity-40'}`} style={{ height: '6px', width: '6px' }}></span>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </>
                         )
-                    })
-                }
-                {
-                    photos.length > 1 && (
-                        <>
-                            <FontAwesomeIcon
-                                icon={faCircleChevronLeft}
-                                onClick={goToPrev}
-                                className={`text-2xl absolute top-1/2 left-3 text-zinc-400 hover:cursor-pointer transition-all hover:scale-110 ${currentPhoto === 0 && 'invisible'}`}
-                            />
-                            <FontAwesomeIcon
-                                icon={faCircleChevronRight}
-                                onClick={goToNext}
-                                className={`text-2xl absolute top-1/2 right-3 text-zinc-400 hover:cursor-pointer transition-all hover:scale-110 ${currentPhoto === photos.length - 1 && 'invisible'}`}
-                            />
-                            <div className='absolute bottom-4 w-full flex items-center justify-center gap-1'>
-                                {
-                                    photos.map((_, index) => {
-                                        return (
-                                            <span key={index} className={`bg-zinc-100 rounded-md ${currentPhoto === index ? '' : 'opacity-40'}`} style={{ height: '6px', width: '6px' }}></span>
-                                        )
-                                    })
-                                }
-                            </div>
-                        </>
-                    )
-                }
+                    }
+                </div>
             </div>
             <div className='w-full max-sm:px-3'>
                 <div className='w-full flex items-center justify-between mt-4'>

@@ -1,5 +1,5 @@
-import { faMagnifyingGlass, faBars, faUser, faChartLine, faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
-import { faHeart, faCompass, faSquarePlus, faEnvelopeOpen, faSun, faBookmark } from '@fortawesome/free-regular-svg-icons'
+import { faMagnifyingGlass, faBars, faChartLine, faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
+import { faHeart, faCompass, faSquarePlus, faUser, faEnvelopeOpen, faSun, faBookmark } from '@fortawesome/free-regular-svg-icons'
 
 export const postMoreOptions = [
     { title: 'Report', color: 'text-red-500' },

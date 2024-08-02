@@ -22,7 +22,7 @@ function Notification({ id, username, message, profile, posted, read }) {
         </div>
       </div>
       <div className='w-10 flex items-center justify-end'>
-        {!read && <span className='h-[.7rem] w-[.7rem] rounded-full bg-blue-500'></span>}
+        {!read && <span className='h-[11px] w-[11px] rounded-full bg-blue-500'></span>}
       </div>
     </div>
   )
