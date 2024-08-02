@@ -113,7 +113,7 @@ function Profile() {
           </div>
         </div>
 
-        <div className='w-full border-t bg-black border-zinc-800 mt-10 max-md:mt-8 sticky top-0'>
+        <div className='w-full border-t bg-black border-zinc-800 mt-10 max-md:mt-8 sticky top-[54px]'>
           <div className='w-max m-auto flex gap-14'>
             {
               profileRouteOptions.map((item, index) =>
