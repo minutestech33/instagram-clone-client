@@ -9,6 +9,7 @@ import Notifications from './pages/Home/Subroutes/Notifications/Notifications'
 import POSTS from './pages/Home/Subroutes/Profile/SubRoutes/POSTS'
 import SAVED from './pages/Home/Subroutes/Profile/SubRoutes/SAVED'
 import TAGGED from './pages/Home/Subroutes/Profile/SubRoutes/TAGGED'
+import Collections from './pages/Home/Subroutes/Profile/SubRoutes/Collections'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path='saved' element={<SAVED />} />
             <Route path='tagged' element={<TAGGED />} />
           </Route>
+          <Route path=':username/saved/:collection' element={<Collections />} />
           <Route path='explore/people' element={<People />} />
         </Route>
       </Routes>

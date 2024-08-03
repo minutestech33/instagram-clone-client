@@ -1,11 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { DesignContext } from '../context/DesignContent'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 function SingleMenuItem({ icon, title, link }) {
     const { setShowMore, setShowCreatePost } = useContext(DesignContext);
     const navigate = useNavigate()
+    const pathname = useLocation().pathname
+
     const clickHandler = () => {
         navigate(link)
         switch (title) {
@@ -30,7 +32,7 @@ function SingleMenuItem({ icon, title, link }) {
         }
     }
     return (
-        <div onClick={clickHandler} className={`group w-full max-[1350px]:w-max flex items-center gap-1 hover:cursor-pointer hover:bg-zinc-800 rounded-lg active:opacity-50`}>
+        <div onClick={clickHandler} className={`group w-full max-[1350px]:w-max flex items-center gap-1 hover:cursor-pointer hover:bg-zinc-800 ${pathname === link && 'bg-zinc-800'} rounded-lg active:opacity-70`}>
             <div className={`h-12 w-12 rounded-lg flex justify-center items-center`}>
                 {
                     title === 'Profile' ? (

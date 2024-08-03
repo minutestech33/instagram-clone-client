@@ -4,7 +4,7 @@ import { footerOptions } from '../utils/LinkOptions'
 
 function Footer() {
     return (
-        <div className='w-full mt-28 flex flex-col items-center justify-center gap-5'>
+        <div className='w-full mt-14 flex flex-col items-center justify-center gap-5'>
             <div className='flex justify-center max-md:px-5 items-center flex-wrap gap-4'>
                 {
                     footerOptions.map((item, index) =>

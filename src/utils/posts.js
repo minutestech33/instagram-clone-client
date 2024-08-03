@@ -30,8 +30,6 @@ export const dummyPosts = [
         ],
         isActiveStory: true,
         comments: [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        shares: [],
-        saved: [],
         tags: ['#mern', '#javascript', '#reactjs', '#nodejs', '#expressjs', '#backenddeveloper', '#mongodb', '#python', '#html', '#css', '#php', '#mysql', '#fullstackdeveloper', '#programming', '#webdevelopment', '#developer', '#webdesign', '#java', '#frontend', '#express'],
         credit: '@it_world7',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
@@ -65,8 +63,6 @@ export const dummyPosts = [
         ],
         isActiveStory: true,
         comments: [1, 2, 3, 4, 5, 6, 7],
-        shares: [],
-        saved: [],
         tags: ['#mern', '#javascript', '#reactjs', '#nodejs', '#expressjs', '#backenddeveloper', '#mongodb', '#python', '#html', '#css', '#php', '#mysql', '#fullstackdeveloper', '#programming', '#webdevelopment', '#developer', '#webdesign', '#java', '#frontend', '#express'],
         credit: '@pic_hotel45',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione explicabo dicta eum repudiandae repellat officiis dolore, facere corporis cupiditate commodi beatae, fugit quisquam delectus maxime similique hic quam quas voluptas distinctio aspernatur itaque mollitia quo. Minus, libero voluptate. Tempora eum aliquid iste sed ea, ex a sunt vel quos corporis!'
@@ -100,8 +96,6 @@ export const dummyPosts = [
         ],
         isActiveStory: false,
         comments: [1, 2, 3, 4, 5],
-        shares: [],
-        saved: [],
         tags: ['#mysql', '#fullstackdeveloper', '#programming', '#webdevelopment', '#developer', '#webdesign', '#java', '#frontend', '#express'],
         credit: '@dawi89',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione explicabo dicta eum repudiandae repellat officiis dolore, facere corporis cupiditate commodi beatae.'
@@ -136,8 +130,6 @@ export const dummyPosts = [
         ],
         isActiveStory: true,
         comments: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-        shares: [],
-        saved: [],
         tags: ['#mysql', '#fullstackdeveloper', '#programming', '#webdevelopment', '#developer', '#webdesign', '#java', '#frontend', '#express'],
         credit: '@mr.progol',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'

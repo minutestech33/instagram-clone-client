@@ -7,6 +7,7 @@ import SuggestedProfileInside from '../../../../components/SuggestedProfileInsid
 import { profileRouteOptions } from '../../../../utils/LinkOptions'
 import ProfileRoute from '../../../../components/ProfileRoute'
 import { Outlet } from 'react-router-dom'
+import Footer from '../../../../components/Footer'
 
 function ProfileButton({ children }) {
   return <button className='w-28 py-2 select-none text-sm font-medium rounded-md bg-zinc-700/80 hover:bg-zinc-800'>{children}</button>
@@ -113,7 +114,7 @@ function Profile() {
           </div>
         </div>
 
-        <div className='w-full border-t bg-black border-zinc-800 mt-10 max-md:mt-8 sticky top-[55px]'>
+        <div className='w-full border-t bg-black z-20 border-zinc-800 mt-10 max-md:mt-8 sticky top-0 max-md:top-[55px]'>
           <div className='w-max m-auto flex gap-14'>
             {
               profileRouteOptions.map((item, index) =>
@@ -121,11 +122,10 @@ function Profile() {
             }
           </div>
         </div>
-
-        <div className='w-full h-max bg-black'>
+        <div className='w-full h-max'>
           <Outlet />
         </div>
-
+        <Footer />
       </div>
     </div>
   )

@@ -71,7 +71,6 @@ function Feed() {
                     likes={post.likes}
                     isActiveStory={post.isActiveStory}
                     comments={post.comments}
-                    shares={post.shares}
                     tags={post.tags}
                     credit={post.credit}
                     description={post.description}

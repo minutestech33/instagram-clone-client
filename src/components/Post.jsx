@@ -5,7 +5,7 @@ import { faHeart, faComment, faPaperPlane, faBookmark, faFaceSmile } from '@fort
 import { DesignContext } from '../context/DesignContent'
 import { useSliceStr } from '../hooks/useSliceStr'
 
-function Post({ id, name, created, photos, likes, isActiveStory, comments, shares, tags, credit, description }) {
+function Post({ id, name, created, photos, likes, isActiveStory, comments, tags, credit, description }) {
     const [isMore, setIsMore] = useState(false)
     const [comment, setComment] = useState("")
     const [currentPhoto, setCurrentPhoto] = useState(0)
