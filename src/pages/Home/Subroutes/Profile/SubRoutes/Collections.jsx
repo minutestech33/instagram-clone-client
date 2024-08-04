@@ -36,7 +36,9 @@ function Collections() {
                         extra={'Add to collection'}
                     />
                 </div>
-                <Footer />
+                <div className='pb-20'>
+                    <Footer />
+                </div>
             </div>
         </div>
     )

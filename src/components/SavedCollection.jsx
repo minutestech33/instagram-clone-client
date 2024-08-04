@@ -16,7 +16,7 @@ function SavedCollection({ name, link }) {
                 name === 'All posts' ? (
                     saved.filter(item => item.user === 'shuvopal89' && item.collection === name).map((item, index) => {
                         return (
-                            <img key={index} src={item.photos[0]} className={`w-full h-full object-cover border-zinc-400 ${(index === 0 && 'border-r border-b')} ${(index === 1 && 'border-b border-l')} ${(index === 2 && 'border-t border-r')} ${(index === 3 && 'border-l border-t')}`} alt="" />
+                            <img key={index} src={item.photos[0]} className={`w-full h-full object-cover border-zinc-400 ${(index === 0 && 'border-r border-b')} ${(index === 1 && 'border-b')} ${(index === 2 && 'border-r')}`} alt="" />
                         )
                     })
                 ) : (

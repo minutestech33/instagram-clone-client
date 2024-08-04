@@ -7,13 +7,15 @@ export const DesignContextProvider = ({ children }) => {
   const [showSwitch, setShowSwitch] = useState(false);
   const [showPostMore, setShowPostMore] = useState(false);
   const [showCreatePost, setShowCreatePost] = useState(false);
+  const [showCreateNote, setShowCreateNote] = useState(false);
   return (
     <DesignContext.Provider
       value={{
         showMore, setShowMore,
         showSwitch, setShowSwitch,
         showPostMore, setShowPostMore,
-        showCreatePost, setShowCreatePost
+        showCreatePost, setShowCreatePost,
+        showCreateNote, setShowCreateNote
       }}
     >
       {children}

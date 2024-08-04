@@ -4,7 +4,7 @@ import { faClose } from '@fortawesome/free-solid-svg-icons'
 
 function SuggestedProfileInside({ cp, photo, username, name }) {
   return (
-    <div className={`w-[192px] flex justify-end flex-shrink-0 transition-transform ease-in-out duration-1000`}style={{ transform: `translateX(-${cp * 100}%)` }}>
+    <div className={`w-[193px] flex justify-start flex-shrink-0 transition-transform ease-in-out duration-1000`}style={{ transform: `translateX(-${cp * 100}%)` }}>
       <div className='w-[180px] border border-zinc-800 rounded-md'>
         <div className='flex justify-end'>
           <FontAwesomeIcon

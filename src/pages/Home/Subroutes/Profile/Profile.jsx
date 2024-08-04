@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGear, faCircleChevronLeft, faCircleChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { faThreads } from '@fortawesome/free-brands-svg-icons'
@@ -8,6 +8,7 @@ import { profileRouteOptions } from '../../../../utils/LinkOptions'
 import ProfileRoute from '../../../../components/ProfileRoute'
 import { Outlet } from 'react-router-dom'
 import Footer from '../../../../components/Footer'
+import { DesignContext } from '../../../../context/DesignContent'
 
 function ProfileButton({ children }) {
   return <button className='w-28 py-2 select-none text-sm font-medium rounded-md bg-zinc-700/80 hover:bg-zinc-800'>{children}</button>
@@ -19,6 +20,7 @@ function PFF({ content, staticContent }) {
 
 function Profile() {
   const [currentPhoto, setCurrentPhoto] = useState(0)
+  const {setShowCreateNote} = useContext(DesignContext)
 
   const goToPrev = () => (currentPhoto !== 0) && setCurrentPhoto(currentPhoto => currentPhoto -= 3)
   const goToNext = () => (currentPhoto !== suggested.length - 3) && setCurrentPhoto(currentPhoto => currentPhoto += 3)
@@ -30,7 +32,7 @@ function Profile() {
           <div className='flex items-center gap-5'>
             <div className='w-36 h-36 max-md:w-20 max-md:h-20 relative flex-shrink-0'>
               <img src="https://pics.craiyon.com/2023-07-15/dc2ec5a571974417a5551420a4fb0587.webp" className='h-full w-full select-none rounded-full object-cover hover:cursor-pointer' alt="" />
-              <div className='w-16 h-10 rounded-lg bg-zinc-800 absolute -top-8 left-10 max-md:left-3 hover:cursor-pointer'>
+              <div onClick={() => setShowCreateNote(true)} className='w-16 h-10 rounded-lg bg-zinc-800 absolute -top-8 left-10 max-md:left-3 hover:cursor-pointer'>
                 <p className='text-xs font-normal text-zinc-400 leading-10 ml-2'>Note...</p>
                 <p className='w-3 h-3 rounded-sm bg-zinc-800 rotate-45 -mt-2 ml-3'></p>
               </div>
@@ -89,7 +91,7 @@ function Profile() {
             <p className='text-sm font-medium text-blue-500 hover:cursor-pointer'>See all</p>
           </div>
           <div className='relative'>
-            <div className='flex overflow-hidden mt-4 overflow-x-scroll no-scrollbar'>
+            <div className='flex overflow-hidden mt-4 overflow-x-scroll max-lg:pl-3 no-scrollbar'>
               {
                 suggested.map((item, index) =>
                   <SuggestedProfileInside key={index} cp={currentPhoto} photo={item.profile} username={item.username} name={item.name} />)
@@ -114,8 +116,8 @@ function Profile() {
           </div>
         </div>
 
-        <div className='w-full border-t bg-black z-20 border-zinc-800 mt-10 max-md:mt-8 sticky top-0 max-md:top-[55px]'>
-          <div className='w-max m-auto flex gap-14'>
+        <div className='w-full border-t bg-black z-20 border-zinc-800 mt-10 max-md:mt-8 sticky top-0 max-md:top-[55px] max-md:border-b'>
+          <div className='m-auto flex justify-center gap-16 max-md:gap-0'>
             {
               profileRouteOptions.map((item, index) =>
                 <ProfileRoute key={index} title={item.title} icon={item.icon} link={item.link} />)
