@@ -10,10 +10,10 @@ function SingleMoreLink({ icon, title, link }) {
             <div className='w-8 flex justify-start'>
                 <FontAwesomeIcon
                     icon={icon}
-                    className='text-zinc-100 text-lg'
+                    className='text-zinc-200 text-lg'
                 />
             </div>
-            <p className='text-zinc-100 text-sm tracking-wide font-normal'>{title}</p>
+            <p className='text-zinc-200 text-sm tracking-wide font-normal'>{title}</p>
         </NavLink>
     )
 }

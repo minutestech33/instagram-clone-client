@@ -20,7 +20,7 @@ function CreateNote() {
         }
     }
     return (
-        <div className='absolute top-0 left-0 z-50 parent w-full h-screen flex justify-center items-center bg-black/60' onClick={createNoteHandler}>
+        <div className='fixed top-0 left-0 z-50 parent w-full h-screen flex justify-center items-center bg-black/60' onClick={createNoteHandler}>
             <div className='w-[500px] h-[500px] flex flex-col justify-between max-md:w-full max-md:h-full max-md:rounded-none bg-zinc-800 rounded-2xl'>
                 <div>
                     <div className='p-5 flex items-center justify-between'>

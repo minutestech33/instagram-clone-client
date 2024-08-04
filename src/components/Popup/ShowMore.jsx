@@ -26,10 +26,10 @@ function ShowMore() {
                                 <div className='w-8 flex justify-start'>
                                     <FontAwesomeIcon
                                         icon={faThreads}
-                                        className='text-zinc-100 text-lg'
+                                        className='text-zinc-200 text-lg'
                                     />
                                 </div>
-                                <p className='text-zinc-100 text-sm tracking-wide font-normal'>Threads</p>
+                                <p className='text-zinc-200 text-sm tracking-wide font-normal'>Threads</p>
                             </div>
                             <FontAwesomeIcon
                                 icon={faUpRightFromSquare}
@@ -41,8 +41,8 @@ function ShowMore() {
                         <p onClick={() => {
                             setShowSwitch(true)
                             setShowMore(false)
-                        }} className='p-4 text-sm font-normal tracking-wide w-full text-zinc-100 rounded-lg hover:cursor-pointer hover:bg-zinc-700'>Switch accounts</p>
-                        <p onClick={() => SSM(false)} className='p-4 text-sm font-normal tracking-wide w-full text-zinc-100 rounded-lg hover:cursor-pointer hover:bg-zinc-700'>Log out</p>
+                        }} className='p-4 text-sm font-normal tracking-wide w-full text-zinc-200 rounded-lg hover:cursor-pointer hover:bg-zinc-700'>Switch accounts</p>
+                        <p onClick={() => SSM(false)} className='p-4 text-sm font-normal tracking-wide w-full text-zinc-200 rounded-lg hover:cursor-pointer hover:bg-zinc-700'>Log out</p>
                     </div>
                 </div>
             </div>

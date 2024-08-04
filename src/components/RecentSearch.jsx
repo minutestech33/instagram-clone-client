@@ -17,7 +17,7 @@ function RecentSearch({ profile, username, title, isActiveStory }) {
                     )
                 }
                 <div>
-                    <p className='font-medium text-zinc-100 text-sm'>{username}</p>
+                    <p className='font-medium text-zinc-200 text-sm'>{username}</p>
                     <p className='font-normal text-zinc-400 text-sm'>{title}</p>
                 </div>
             </div>

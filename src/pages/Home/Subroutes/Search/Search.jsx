@@ -21,7 +21,7 @@ function Search() {
             type='text'
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className='w-full px-16 py-3 text-zinc-100 bg-zinc-800 rounded-full outline-none border-none caret-zinc-400'
+            className='w-full px-16 py-3 text-zinc-200 bg-zinc-800 rounded-full outline-none border-none caret-zinc-400'
           />
           <FontAwesomeIcon
             icon={faCircleXmark}
@@ -31,7 +31,7 @@ function Search() {
         </div>
         <div className='py-6'>
           <div className='flex justify-between items-center'>
-            <p className='text-md font-medium text-zinc-100'>Recent</p>
+            <p className='text-md font-medium text-zinc-200'>Recent</p>
             <p className='text-sm font-medium hover:cursor-pointer text-blue-500'>Clear all</p>
           </div>
 

@@ -8,7 +8,7 @@ function People() {
   return (
     <div className='w-full flex flex-col items-center justify-between h-screen overflow-y-scroll'>
       <div className='w-[570px] max-md:w-full max-md:px-3 h-max mt-20 max-md:mt-3'>
-        <p className='text-md font-medium text-zinc-100'>Suggested</p>
+        <p className='text-md font-medium text-zinc-200'>Suggested</p>
         <div className='w-full h-max flex flex-col gap-4 mt-5'>
           {
             suggested.map((item, index) => {

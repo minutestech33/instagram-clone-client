@@ -29,7 +29,7 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, tags,
                         )
                     }
                     <div className='flex items-center gap-2 hover:cursor-pointer'>
-                        <p className='text-sm font-medium text-zinc-100'>{`${name} . `}</p>
+                        <p className='text-sm font-medium text-zinc-200'>{`${name} . `}</p>
                         <p className='text-zinc-400 text-sm'>{created}</p>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, tags,
                     <FontAwesomeIcon
                         icon={faEllipsis}
                         onClick={() => setShowPostMore(true)}
-                        className='text-md text-zinc-100 hover:cursor-pointer active:opacity-50'
+                        className='text-md text-zinc-200 hover:cursor-pointer active:opacity-50'
                     />
                 </div>
             </div>
@@ -62,12 +62,12 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, tags,
                                 <FontAwesomeIcon
                                     icon={faCircleChevronLeft}
                                     onClick={goToPrev}
-                                    className={`text-2xl absolute top-1/2 left-3 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110 ${currentPhoto === 0 && 'invisible'}`}
+                                    className={`text-2xl absolute top-1/2 left-3 text-zinc-200 hover:cursor-pointer transition-all hover:scale-110 ${currentPhoto === 0 && 'invisible'}`}
                                 />
                                 <FontAwesomeIcon
                                     icon={faCircleChevronRight}
                                     onClick={goToNext}
-                                    className={`text-2xl absolute top-1/2 right-3 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110 ${currentPhoto === photos.length - 1 && 'invisible'}`}
+                                    className={`text-2xl absolute top-1/2 right-3 text-zinc-200 hover:cursor-pointer transition-all hover:scale-110 ${currentPhoto === photos.length - 1 && 'invisible'}`}
                                 />
                                 <div className='absolute bottom-4 w-full flex items-center justify-center gap-1'>
                                     {
@@ -88,7 +88,7 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, tags,
                     <div className='flex items-center gap-4'>
                         <FontAwesomeIcon
                             icon={faHeart}
-                            className='text-2xl text-zinc-100 hover:text-zinc-400 hover:cursor-pointer active:scale-90'
+                            className='text-2xl text-zinc-200 hover:text-zinc-400 hover:cursor-pointer active:scale-90'
                         />
                         <FontAwesomeIcon
                             icon={faHeartFull}
@@ -96,25 +96,25 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, tags,
                         />
                         <FontAwesomeIcon
                             icon={faComment}
-                            className='text-2xl text-zinc-100 hover:text-zinc-400 hover:cursor-pointer active:scale-90'
+                            className='text-2xl text-zinc-200 hover:text-zinc-400 hover:cursor-pointer active:scale-90'
                         />
                         <FontAwesomeIcon
                             icon={faPaperPlane}
-                            className='text-2xl text-zinc-100 hover:text-zinc-400 hover:cursor-pointer active:scale-90'
+                            className='text-2xl text-zinc-200 hover:text-zinc-400 hover:cursor-pointer active:scale-90'
                         />
                     </div>
                     <FontAwesomeIcon
                         icon={faBookmark}
-                        className='text-2xl text-zinc-100 hover:text-zinc-400 hover:cursor-pointer active:scale-90'
+                        className='text-2xl text-zinc-200 hover:text-zinc-400 hover:cursor-pointer active:scale-90'
                     />
                 </div>
-                <p className='text-sm font-medium text-zinc-100 mt-3'>Liked by yaswanth_yash_430 and others</p>
+                <p className='text-sm font-medium text-zinc-200 mt-3'>Liked by yaswanth_yash_430 and others</p>
                 {
                     isMore ? (
                         <div className='w-full'>
-                            <p className='text-sm mt-2 font-normal text-zinc-100'><span className='font-medium'>joinuniversitymeta</span> Git vs Github</p>
-                            <p className='text-sm mt-3 font-normal text-zinc-100'><span className='font-medium'>Credit:</span> {credit}</p>
-                            <p className='text-sm font-normal text-zinc-100 mt-3'>{description}</p>
+                            <p className='text-sm mt-2 font-normal text-zinc-200'><span className='font-medium'>joinuniversitymeta</span> Git vs Github</p>
+                            <p className='text-sm mt-3 font-normal text-zinc-200'><span className='font-medium'>Credit:</span> {credit}</p>
+                            <p className='text-sm font-normal text-zinc-200 mt-3'>{description}</p>
                             <ul className='w-full flex items-center flex-wrap mt-3'>
                                 {
                                     tags.map((item, index) => {
@@ -126,7 +126,7 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, tags,
                             </ul>
                         </div>
                     ) : (
-                        <p className='text-sm font-normal text-zinc-100 mt-3'>
+                        <p className='text-sm font-normal text-zinc-200 mt-3'>
                             {
                                 `${useSliceStr({ text: description, length: 100 })}`
                             }
@@ -136,9 +136,9 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, tags,
                 }
                 <p className='text-sm font-normal text-zinc-400 mt-3 hover:cursor-pointer'>{`View all ${comments.length} comments`}</p>
                 <div className='w-full flex items-center gap-3 mb-2'>
-                    <input type='text' placeholder="Add a comment..." className='w-full py-2 border-none outline-none bg-black placeholder:text-zinc-400 font-normal text-sm text-zinc-100' onChange={(e) => setComment(e.target.value)} />
+                    <input type='text' placeholder="Add a comment..." className='w-full py-2 border-none outline-none bg-black placeholder:text-zinc-400 font-normal text-sm text-zinc-200' onChange={(e) => setComment(e.target.value)} />
                     {
-                        comment.length >= 1 && <p className='text-sm text-blue-500 font-medium hover:cursor-pointer hover:text-zinc-100'>Post</p>
+                        comment.length >= 1 && <p className='text-sm text-blue-500 font-medium hover:cursor-pointer hover:text-zinc-200'>Post</p>
                     }
                     <FontAwesomeIcon
                         icon={faFaceSmile}

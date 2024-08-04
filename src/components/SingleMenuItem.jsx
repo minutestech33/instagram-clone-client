@@ -40,12 +40,12 @@ function SingleMenuItem({ icon, title, link }) {
                     ) : (
                         <FontAwesomeIcon
                             icon={icon}
-                            className='text-2xl text-zinc-100 group-hover:scale-110 transition-all group-active:scale-95'
+                            className='text-2xl text-zinc-200 group-hover:scale-110 transition-all group-active:scale-95'
                         />
                     )
                 }
             </div>
-            <p className={`text-md font-normal text-zinc-100 max-[1350px]:hidden`}>{title}</p>
+            <p className={`text-md font-normal text-zinc-200 max-[1350px]:hidden`}>{title}</p>
         </div>
     )
 }

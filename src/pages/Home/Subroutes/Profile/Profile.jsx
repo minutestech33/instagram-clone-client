@@ -26,7 +26,7 @@ function Profile() {
       if (title === 'followers') setShowFollowers(true)
       if (title === 'following') setShowFollowing(true)
     }
-    return <p onClick={() => clickHandler()} className={`text-md font-normal select-none text-zinc-100 ${!staticContent && 'hover:cursor-pointer'}`}>{children}</p>
+    return <p onClick={() => clickHandler()} className={`text-md font-normal select-none text-zinc-200 ${!staticContent && 'hover:cursor-pointer'}`}>{children}</p>
   }
 
   return (
@@ -44,11 +44,11 @@ function Profile() {
             <div className='hidden max-md:block'>
               <div className='flex flex-col gap-3'>
                 <div className='flex items-center gap-2'>
-                  <p className='text-xl font-normal text-zinc-100 mr-4'>shuvopal89</p>
+                  <p className='text-xl font-normal text-zinc-200 mr-4'>shuvopal89</p>
                   <FontAwesomeIcon
                     icon={faGear}
                     onClick={() => setShowProfileSettings(true)}
-                    className='text-xl text-zinc-100 hover:cursor-pointer'
+                    className='text-xl text-zinc-200 hover:cursor-pointer'
                   />
                 </div>
                 <div className='flex items-center gap-2'>
@@ -62,14 +62,14 @@ function Profile() {
           <div className='max-w-[560px] flex'>
             <div className='flex flex-col gap-4'>
               <div className='flex items-center gap-3 max-md:hidden'>
-                <p className='text-xl font-normal text-zinc-100 mr-4'>shuvopal89</p>
+                <p className='text-xl font-normal text-zinc-200 mr-4'>shuvopal89</p>
                 <ProfileButton>Edit profile</ProfileButton>
                 <button className='w-24 hidden py-2 select-none text-sm font-medium rounded-md bg-blue-500 hover:bg-blue-600'>Follow</button>
                 <ProfileButton>View archive</ProfileButton>
                 <FontAwesomeIcon
                   icon={faGear}
                   onClick={() => setShowProfileSettings(true)}
-                  className='text-xl text-zinc-100 hover:cursor-pointer'
+                  className='text-xl text-zinc-200 hover:cursor-pointer'
                 />
               </div>
               <div className='flex items-center gap-8'>
@@ -78,21 +78,21 @@ function Profile() {
                 <PFF title={'following'}>{`${95} following`}</PFF>
               </div>
               <div className='flex flex-col gap-[7px]'>
-                <p className='text-sm font-medium text-zinc-100'>Shuvo Pal</p>
+                <p className='text-sm font-medium text-zinc-200'>Shuvo Pal</p>
                 <div className='flex items-center select-none gap-1 w-max bg-zinc-700/80 rounded-2xl py-1 px-2 hover:cursor-pointer hover:bg-zinc-700'>
                   <FontAwesomeIcon
                     icon={faThreads}
-                    className='text-md text-zinc-100 hover:cursor-pointer'
+                    className='text-md text-zinc-200 hover:cursor-pointer'
                   />
-                  <p className='text-xs font-normal text-zinc-100'>shuvopal89</p>
+                  <p className='text-xs font-normal text-zinc-200'>shuvopal89</p>
                 </div>
-                <p className='text-sm font-normal text-zinc-100'>Don't worry!</p>
+                <p className='text-sm font-normal text-zinc-200'>Don't worry!</p>
               </div>
             </div>
           </div>
         </div>
         <div className='w-full mt-10 max-md:mt-8 flex items-center justify-between max-lg:px-3'>
-          <p className='text-md font-medium text-zinc-100'>Suggested for you</p>
+          <p className='text-md font-medium text-zinc-200'>Suggested for you</p>
           <p className='text-sm font-medium text-blue-500 hover:cursor-pointer'>See all</p>
         </div>
         <div className='relative mt-4'>
@@ -110,19 +110,19 @@ function Profile() {
                   <FontAwesomeIcon
                     icon={faCircleChevronLeft}
                     onClick={goToPrev}
-                    className={`text-2xl absolute top-1/2 left-3 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110 max-md:hidden ${currentPhoto === 0 && 'invisible'}`}
+                    className={`text-2xl absolute top-1/2 left-3 text-zinc-200 hover:cursor-pointer transition-all hover:scale-110 max-md:hidden ${currentPhoto === 0 && 'invisible'}`}
                   />
                   <FontAwesomeIcon
                     icon={faCircleChevronRight}
                     onClick={goToNext}
-                    className={`text-2xl absolute top-1/2 right-3 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110 max-md:hidden ${currentPhoto === suggested.length - 3 && 'invisible'}`}
+                    className={`text-2xl absolute top-1/2 right-3 text-zinc-200 hover:cursor-pointer transition-all hover:scale-110 max-md:hidden ${currentPhoto === suggested.length - 3 && 'invisible'}`}
                   />
                 </>
               )
             }
           </div>
         </div>
-        <div className='w-full border-t sticky top-0 bg-black z-20 border-zinc-800 mt-10 max-md:mt-8 max-md:border-b'>
+        <div className='w-full border-t bg-black z-20 border-zinc-800 mt-10 max-md:mt-8 max-md:border-b'>
           <div className='m-auto flex justify-center gap-16 max-md:gap-0'>
             {
               profileRouteOptions.map((item, index) =>

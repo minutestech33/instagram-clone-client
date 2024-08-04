@@ -13,7 +13,7 @@ function ShowFollowing() {
         }
     }
     return (
-        <div className='absolute top-0 left-0 z-50 parent w-full h-screen flex justify-center items-center bg-black/60' onClick={createNoteHandler}>
+        <div className='fixed top-0 left-0 z-50 parent w-full h-screen flex justify-center items-center bg-black/60' onClick={createNoteHandler}>
             <div className='w-[430px] bg-zinc-800 rounded-2xl max-md:w-full max-md:h-full max-md:rounded-none'>
                 <div className='h-[50px] px-4 flex items-center justify-center border-b border-zinc-700 relative'>
                     <p className='text-md font-medium text-zinc-200 text-center'>Following</p>

@@ -6,7 +6,7 @@ function SuggestedDetails({profile, username, name}) {
       <div className='flex items-center gap-3'>
         <img src={profile} className='h-12 w-12 rounded-full object-cover' alt="" />
         <div className='flex flex-col gap-0'>
-            <p className='text-zinc-100 font-medium text-sm'>{username}</p>
+            <p className='text-zinc-200 font-medium text-sm'>{username}</p>
             <p className='text-zinc-400 font-normal text-sm'>{name}</p>
             <p className='text-zinc-400 font-normal text-xs'>New to Instagram</p>
         </div>

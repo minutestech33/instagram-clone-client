@@ -20,11 +20,11 @@ function Collections() {
                     <p className='text-sm font-medium'>Saved</p>
                 </div>
                 <div className='mt-4 flex items-center max-lg:px-3 justify-between'>
-                    <p className='text-lg font-normal text-zinc-100'>{state.collectionName}</p>
+                    <p className='text-lg font-normal text-zinc-200'>{state.collectionName}</p>
                     {
                         state.collectionName !== 'All posts' && (<FontAwesomeIcon
                             icon={faEllipsis}
-                            className='text-lg text-zinc-100 hover:cursor-pointer'
+                            className='text-lg text-zinc-200 hover:cursor-pointer'
                         />)
                     }
                 </div>

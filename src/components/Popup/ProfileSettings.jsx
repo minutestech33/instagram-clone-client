@@ -17,7 +17,7 @@ function ProfileSettings() {
         }
     }
     return (
-        <div className='absolute top-0 left-0 z-50 parent w-full h-screen flex justify-center items-center bg-black/60' onClick={createNoteHandler}>
+        <div className='fixed top-0 left-0 z-50 parent w-full h-screen flex justify-center items-center bg-black/60' onClick={createNoteHandler}>
             <div className='w-[430px] flex flex-col justify-between bg-zinc-800 rounded-2xl divide-y divide-zinc-700 max-md:mx-3'>
                 {
                     profileSettingsOptions.map((item, index) =>

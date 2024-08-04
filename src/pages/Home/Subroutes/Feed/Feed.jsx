@@ -43,7 +43,7 @@ function Feed() {
                 <FontAwesomeIcon
                   icon={faCircleChevronLeft}
                   onClick={goToPrev}
-                  className='text-2xl max-[670px]:hidden absolute top-6 max-md:top-10 left-5 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110'
+                  className='text-2xl max-[670px]:hidden absolute top-6 max-md:top-10 left-5 text-zinc-200 hover:cursor-pointer transition-all hover:scale-110'
                 />
               )
             }
@@ -52,7 +52,7 @@ function Feed() {
                 <FontAwesomeIcon
                   icon={faCircleChevronRight}
                   onClick={goToNext}
-                  className='text-2xl max-[670px]:hidden absolute top-6 max-md:top-10 right-5 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110'
+                  className='text-2xl max-[670px]:hidden absolute top-6 max-md:top-10 right-5 text-zinc-200 hover:cursor-pointer transition-all hover:scale-110'
                 />
               )
             }
@@ -87,15 +87,15 @@ function Feed() {
           <div className='flex items-start gap-3'>
             <img src="https://pics.craiyon.com/2023-07-15/dc2ec5a571974417a5551420a4fb0587.webp" className='h-11 select-none w-11 rounded-full object-cover hover:cursor-pointer' alt="" />
             <div>
-              <p className='font-medium text-zinc-100 text-sm'>shuvopal89</p>
+              <p className='font-medium text-zinc-200 text-sm'>shuvopal89</p>
               <p className='font-normal text-zinc-400 text-sm'>Shuvo Pal</p>
             </div>
           </div>
-          <p onClick={() => setShowSwitch(true)} className='text-xs text-blue-500 font-normal hover:cursor-pointer hover:text-zinc-100'>Switch</p>
+          <p onClick={() => setShowSwitch(true)} className='text-xs text-blue-500 font-normal hover:cursor-pointer hover:text-zinc-200'>Switch</p>
         </div>
         <div className='mt-6 flex justify-between items-center'>
           <p className='text-sm font-medium text-zinc-400'>Suggested for you</p>
-          <NavLink to="/explore/people" className='text-xs text-zinc-100 font-medium hover:cursor-pointer hover:text-blue-500'>See All</NavLink>
+          <NavLink to="/explore/people" className='text-xs text-zinc-200 font-medium hover:cursor-pointer hover:text-blue-500'>See All</NavLink>
         </div>
         <div className='mt-4 flex flex-col gap-4'>
           <SuggustedProfile name={'anglenila7'} />

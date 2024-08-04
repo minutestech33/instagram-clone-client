@@ -23,7 +23,7 @@ function BottomNavigation() {
                                 key={index}
                                 onClick={() => bottomIconHandler(item.link, item.title)}
                                 icon={item.icon}
-                                className='text-2xl text-zinc-100 active:scale-95'
+                                className='text-2xl text-zinc-200 active:scale-95'
                             />)
                 }
             </div>

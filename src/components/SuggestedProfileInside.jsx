@@ -13,9 +13,9 @@ function SuggestedProfileInside({ cp, photo, username, name }) {
           />
         </div>
         <img src={photo} className='h-20 w-20 -mt-2 rounded-full m-auto' alt="" />
-        <p className='text-sm font-medium text-zinc-100 text-center mt-2'>{username}</p>
+        <p className='text-sm font-medium text-zinc-200 text-center mt-2'>{username}</p>
         <p className='text-sm font-normal text-zinc-400 text-center'>{name}</p>
-        <button className='w-full mt-6 text-sm font-medium text-blue-500 outline-none hover:cursor-pointer hover:text-zinc-100 py-[10px] border-t border-zinc-800'>Follow</button>
+        <button className='w-full mt-6 text-sm font-medium text-blue-500 outline-none hover:cursor-pointer hover:text-zinc-200 py-[10px] border-t border-zinc-800'>Follow</button>
       </div>
     </div>
   )

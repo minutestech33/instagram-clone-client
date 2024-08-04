@@ -6,9 +6,9 @@ function Notifications() {
   return (
     <div className='w-full h-screen overflow-y-scroll'>
       <div className='max-w-[650px] m-auto px-3'>
-        <p className='text-2xl font-bold text-zinc-100 mt-6'>Notifications</p>
+        <p className='text-2xl font-bold text-zinc-200 mt-6'>Notifications</p>
         <div className='pb-4 border-b border-zinc-800 mt-4'>
-          <p className='text-lg font-semibold text-zinc-100'>New</p>
+          <p className='text-lg font-semibold text-zinc-200'>New</p>
           <div className='mt-5 flex flex-col'>
             {
               notifications.filter(notification => notification.read === false).map((item, index) => {
@@ -31,7 +31,7 @@ function Notifications() {
 
         {/* Earlier notifications container */}
         <div className='pb-4 mt-4'>
-          <p className='text-lg font-semibold text-zinc-100'>Earlier</p>
+          <p className='text-lg font-semibold text-zinc-200'>Earlier</p>
           <div className='mt-5 flex flex-col'>
             {
               notifications.filter(notification => notification.read === true).map((item, index) => {

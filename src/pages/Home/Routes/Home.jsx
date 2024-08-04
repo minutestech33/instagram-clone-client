@@ -29,11 +29,11 @@ function Home() {
                 <div className='h-11 w-12 rounded-lg flex justify-center items-center'>
                   <FontAwesomeIcon
                     icon={faInstagram}
-                    className='text-2xl text-zinc-100'
+                    className='text-2xl text-zinc-200'
                   />
                 </div>
               </div>
-              <p className={`text-2xl font-normal px-3 pt-3 text-zinc-100 font-lobster max-[1350px]:hidden`}>Instagram</p>
+              <p className={`text-2xl font-normal px-3 pt-3 text-zinc-200 font-lobster max-[1350px]:hidden`}>Instagram</p>
             </NavLink>
             <div className='flex flex-col gap-2 w-full mt-9'>
               {

@@ -12,12 +12,12 @@ function Notification({ id, username, message, profile, posted, read }) {
           <div className={`h-6 w-6 absolute -bottom-2 -right-1 flex justify-center items-center rounded-full ${message === "likes your post." ? 'bg-red-500' : 'bg-indigo-500'}`}>
             <FontAwesomeIcon
               icon={message === "likes your post." ? faHeart : faImage}
-              className='text-sm text-zinc-100'
+              className='text-sm text-zinc-200'
             />
           </div>
         </div>
         <div>
-          <p className='text-sm font-normal text-zinc-400 '><span className='font-semibold hover:cursor-pointer text-zinc-100'>{username}</span> {message}</p>
+          <p className='text-sm font-normal text-zinc-400 '><span className='font-semibold hover:cursor-pointer text-zinc-200'>{username}</span> {message}</p>
           <p className='text-sm font-medium text-zinc-500'>{moment(posted).fromNow()}</p>
         </div>
       </div>
