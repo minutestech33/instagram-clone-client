@@ -15,9 +15,9 @@ function CreatePost() {
     return (
         <div className={`absolute w-full h-screen top-0 left-0 z-50`}>
             <div className='parent relative w-full h-screen flex justify-center items-center bg-black/60' onClick={createPostHandler}>
-                <div className={`w-[440px] max-md:w-[350px] bg-zinc-800 rounded-2xl ${showCreatePost ? 'scaleAnimShow' : ''}`}>
+                <div className={`w-[440px] max-md:w-full max-md:h-full max-md:rounded-none bg-zinc-800 rounded-2xl ${showCreatePost ? 'scaleAnimShow' : ''}`}>
                     <p className='text-center py-3 text-zinc-100 font-medium text-md border-b border-zinc-700'>Create new post</p>
-                    <div className='h-[450px] max-md:h-[390px] flex flex-col gap-6 justify-center items-center'>
+                    <div className='h-[450px] flex flex-col gap-6 justify-center items-center'>
                         <FontAwesomeIcon
                             icon={faImage}
                             className='text-zinc-100 text-6xl'
@@ -31,7 +31,7 @@ function CreatePost() {
             <FontAwesomeIcon
                 icon={faXmark}
                 onClick={() => setShowCreatePost(false)}
-                className='text-zinc-100 text-2xl absolute right-8 top-5 hover:cursor-pointer'
+                className='text-zinc-100 text-2xl max-md:top-3 max-md:right-4 absolute right-8 top-5 hover:cursor-pointer'
             />
         </div>
     )

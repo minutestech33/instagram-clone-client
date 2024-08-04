@@ -15,7 +15,7 @@ function PostMore() {
     }
     return (
         <div className={`parent w-full h-screen absolute top-0 left-0 flex justify-center items-center bg-black/60 z-50`} onClick={handlePostShowMore}>
-            <div className={`w-[350px] bg-zinc-800 rounded-2xl divide-y divide-zinc-700 hover:cursor-pointer ${showPostMore ? 'scaleAnimShow' : ''}`}>
+            <div className={`w-[350px] bg-zinc-800 rounded-2xl max-md:mx-3 divide-y divide-zinc-700 hover:cursor-pointer ${showPostMore ? 'scaleAnimShow' : ''}`}>
                 {postMoreOptions.map((item, index) => <p key={index} onClick={() => handleItemClick(item.title)} className={`text-center text-sm font-medium ${item.color} py-4`}>{item.title}</p>)}
             </div>
         </div>

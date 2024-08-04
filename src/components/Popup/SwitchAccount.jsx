@@ -9,7 +9,7 @@ function SwitchAccount() {
   const switchHandler = (e) => e.target.classList.contains("parent") && setShowSwitch(false)
   return (
     <div className={`parent absolute w-full h-screen top-0 left-0 flex justify-center items-center bg-black/60 z-50`} onClick={switchHandler}>
-      <div className={`w-[400px] max-md:w-[350px] bg-zinc-800 rounded-2xl ${showSwitch ? 'scaleAnimShow' : ''}`}>
+      <div className={`w-[400px] max-md:w-[350px] max-md:mx-3 bg-zinc-800 rounded-2xl ${showSwitch ? 'scaleAnimShow' : ''}`}>
         <div className='w-full py-4 border-b border-zinc-700 flex justify-between items-center px-4'>
           <span className='invisible'>left</span>
           <p className='text-md font-medium text-zinc-100'>Switch accounts</p>
