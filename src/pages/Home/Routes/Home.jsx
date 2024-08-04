@@ -21,8 +21,8 @@ function Home() {
 
   return (
     <div className='w-full h-screen'>
-      <div className='w-full h-screen bg-black flex'>
-        <div className={`h-screen w-72 max-[1350px]:w-[72px] border-r border-zinc-800 max-md:hidden px-3 pt-6 pb-5 flex flex-col justify-between`}>
+      <div className='w-full bg-black flex'>
+        <div className={`h-screen w-[288px] max-[1350px]:w-[72px] border-r border-zinc-800 max-md:hidden px-3 pt-6 pb-5 flex flex-col justify-between`}>
           <div className='flex flex-col'>
             <NavLink to={"/"} className='w-full flex items-center gap-1 hover:cursor-pointer select-none'>
               <div className={`hidden max-[1350px]:block`}>
@@ -49,8 +49,8 @@ function Home() {
             }
           </div>
         </div>
-        <div className='h-screen w-full text-zinc-200 bg-black'>
-          <div className='sticky w-full top-0 h-[55px] z-10 bg-black hidden max-md:block border-b border-zinc-800'>
+        <div className='text-zinc-200 bg-black mainLeft'>
+          <div className='sticky top-0 h-[55px] z-10 bg-black hidden max-md:block border-b border-zinc-800'>
             <Header />
           </div>
           <div className='w-full'>

@@ -91,18 +91,10 @@ function Profile() {
             </div>
           </div>
         </div>
-
-
-
-
-
         <div className='w-full mt-10 max-md:mt-8 flex items-center justify-between max-lg:px-3'>
           <p className='text-md font-medium text-zinc-100'>Suggested for you</p>
           <p className='text-sm font-medium text-blue-500 hover:cursor-pointer'>See all</p>
         </div>
-
-
-
         <div className='relative mt-4'>
           <div className='flex w-full overflow-hidden overflow-x-scroll max-lg:pl-3 no-scrollbar'>
             {
@@ -130,10 +122,6 @@ function Profile() {
             }
           </div>
         </div>
-
-
-
-
         <div className='w-full border-t bg-black z-20 border-zinc-800 mt-10 max-md:mt-8 max-md:border-b'>
           <div className='m-auto flex justify-center gap-16 max-md:gap-0'>
             {
@@ -142,18 +130,10 @@ function Profile() {
             }
           </div>
         </div>
-
-
-
-
         <div className='w-full h-max'>
           <Outlet />
         </div>
         <Footer />
-
-
-
-
       </div>
     </div>
   )

@@ -33,7 +33,7 @@ function ShowFollowers() {
                             />
                         </div>
                     </div>
-                    <div className='h-[360px] px-4 pb-4 flex flex-col gap-5 showFollowers'>
+                    <div className='h-[360px] px-4 pb-4 showFollowers'>
                         {
                             suggested.map((item, index) =>
                                 <ProfileFollowers key={index} profile={item.profile} username={item.username} isFollowed={item.isFollowed} name={item.name} btnTitle="Remove" />)

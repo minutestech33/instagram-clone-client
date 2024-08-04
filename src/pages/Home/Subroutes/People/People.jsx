@@ -25,7 +25,7 @@ function People() {
           }
         </div>
       </div>
-      <div className='w-full flex flex-col justify-center items-center gap-2 mt-24'>
+      <div className='w-full flex flex-col justify-center items-center gap-2 mt-24 pb-20'>
         <div className='flex items-start gap-4'>
           {
             footerOptions.slice(0, 7).map((item, index) =>

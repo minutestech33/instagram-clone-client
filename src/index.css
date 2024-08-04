@@ -21,3 +21,15 @@
         height: calc(100vh - 110px);
     }
 }
+@media only screen and (max-width: 1350px) {
+    .mainLeft {
+        width: calc(100% - 72px);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .mainLeft {
+        width: calc(100%);
+    }
+}
+
+.mainLeft {min-width: calc(100% - 288px);}

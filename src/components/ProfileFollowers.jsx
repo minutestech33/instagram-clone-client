@@ -2,7 +2,7 @@ import React from 'react'
 
 function ProfileFollowers({profile, username, isFollowed, name, btnTitle}) {
     return (
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between items-center pb-4'>
             <div className='flex items-center gap-2'>
                 <img src={profile} className='w-12 h-12 rounded-full flex-shrink-0' alt="" />
                 <div className='flex flex-col gap-0'>
