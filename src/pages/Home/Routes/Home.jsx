@@ -12,9 +12,10 @@ import BottomNavigation from '../../../components/BottomNavigation'
 import { singleMenuOptions } from '../../../utils/LinkOptions'
 import SingleMenuItem from '../../../components/SingleMenuItem'
 import CreateNote from '../../../components/Popup/CreateNote'
+import ProfileSettings from '../../../components/Popup/ProfileSettings'
 
 function Home() {
-  const { showMore, showSwitch, showPostMore, showCreatePost , showCreateNote} = useContext(DesignContext);
+  const { showMore, showSwitch, showPostMore, showCreatePost , showCreateNote, showProfileSettings} = useContext(DesignContext);
   return (
     <div className='w-full h-screen'>
       <div className='w-full h-screen bg-black flex'>
@@ -62,6 +63,7 @@ function Home() {
       {showSwitch && <SwitchAccount />}
       {showPostMore && <PostMore />}
       {showCreateNote && <CreateNote />}
+      {showProfileSettings && <ProfileSettings />}
     </div>
   )
 }

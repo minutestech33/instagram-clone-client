@@ -20,7 +20,7 @@ function PFF({ content, staticContent }) {
 
 function Profile() {
   const [currentPhoto, setCurrentPhoto] = useState(0)
-  const {setShowCreateNote} = useContext(DesignContext)
+  const {setShowCreateNote, setShowProfileSettings} = useContext(DesignContext)
 
   const goToPrev = () => (currentPhoto !== 0) && setCurrentPhoto(currentPhoto => currentPhoto -= 3)
   const goToNext = () => (currentPhoto !== suggested.length - 3) && setCurrentPhoto(currentPhoto => currentPhoto += 3)
@@ -43,6 +43,7 @@ function Profile() {
                   <p className='text-xl font-normal text-zinc-100 mr-4'>shuvopal89</p>
                   <FontAwesomeIcon
                     icon={faGear}
+                    onClick={() => setShowProfileSettings(true)}
                     className='text-xl text-zinc-100 hover:cursor-pointer'
                   />
                 </div>
@@ -63,6 +64,7 @@ function Profile() {
                 <ProfileButton>View archive</ProfileButton>
                 <FontAwesomeIcon
                   icon={faGear}
+                  onClick={() => setShowProfileSettings(true)}
                   className='text-xl text-zinc-100 hover:cursor-pointer'
                 />
               </div>

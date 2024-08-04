@@ -58,3 +58,15 @@ export const profileRouteOptions = [
     {title: 'SAVED', icon: faBookmark, link: '/shuvopal89/saved'},
     {title: 'TAGGED', icon: faUserTag, link: '/shuvopal89/tagged'},
 ]
+
+export const profileSettingsOptions = [
+    { title: 'Apps and websites'},
+    { title: 'QR code'},
+    { title: 'Notifications'},
+    { title: 'Settings and privacy'},
+    { title: 'Meta Verified'},
+    { title: 'Supervision'},
+    { title: 'Embed'},
+    { title: 'Log out'},
+    { title: 'Cancel'}
+]
