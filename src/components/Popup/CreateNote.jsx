@@ -30,7 +30,7 @@ function CreateNote() {
                             className='text-zinc-200 text-2xl hover:cursor-pointer'
                         />
                         <p className='text-xl text-zinc-200 font-bold'>New note</p>
-                        <p className={`text-sm font-medium select-none text-blue-500 ${!note && 'opacity-30'} hover:cursor-pointer`}>Share</p>
+                        <p className={`text-sm font-medium select-none text-blue-500 ${!note && 'opacity-40'} hover:cursor-pointer`}>Share</p>
                     </div>
                     <div className='flex justify-center mt-12'>
                         <div className='w-40 h-40 relative'>

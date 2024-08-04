@@ -10,8 +10,8 @@ function Collections() {
     const navigate = useNavigate();
     const { state } = useLocation();
     return (
-        <div className='w-full mt-8'>
-            <div className='w-full max-w-[900px] h-3 m-auto'>
+        <div className='w-full h-screen overflow-y-scroll'>
+            <div className='w-full max-w-[900px] h-3 m-auto mt-8'>
                 <div onClick={() => navigate(-1)} className='flex max-lg:px-3 items-center gap-2 hover:cursor-pointer text-zinc-400 active:text-zinc-500'>
                     <FontAwesomeIcon
                         icon={faAngleLeft}
@@ -36,9 +36,7 @@ function Collections() {
                         extra={'Add to collection'}
                     />
                 </div>
-                <div className='pb-20'>
-                    <Footer />
-                </div>
+                <Footer />
             </div>
         </div>
     )

@@ -13,14 +13,14 @@ import { useSliceStr } from '../../../../hooks/useSliceStr'
 import { footerOptions } from '../../../../utils/LinkOptions'
 
 function Feed() {
-  const [storyObsolete, setStoryObsolete] = useState(0)
-  const { setShowSwitch } = useContext(DesignContext)
-
+  const [storyObsolete, setStoryObsolete] = useState(0);
+  const { setShowSwitch } = useContext(DesignContext);
+  
   const goToPrev = () => (storyObsolete !== 0) && setStoryObsolete(storyObsolete => storyObsolete -= 4)
   const goToNext = () => (storyObsolete !== stories.length - 4) && setStoryObsolete(storyObsolete => storyObsolete += 4)
 
   return (
-    <div className='w-full flex justify-center gap-20'>
+    <div className='w-full flex justify-center gap-20 h-screen overflow-y-scroll'>
       <div className='w-[636px] max-md:w-full h-max mt-9 max-md:mt-0'>
         <div className='relative w-full'>
           <div className='w-full flex max-md:px-[6.5px] items-center select-none overflow-x-scroll no-scrollbar border-zinc-800 max-md:border-b max-md:py-3'>

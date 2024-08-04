@@ -13,9 +13,12 @@ import { singleMenuOptions } from '../../../utils/LinkOptions'
 import SingleMenuItem from '../../../components/SingleMenuItem'
 import CreateNote from '../../../components/Popup/CreateNote'
 import ProfileSettings from '../../../components/Popup/ProfileSettings'
+import ShowFollowers from '../../../components/Popup/ShowFollowers'
+import ShowFollowing from '../../../components/Popup/ShowFollowing'
 
 function Home() {
-  const { showMore, showSwitch, showPostMore, showCreatePost , showCreateNote, showProfileSettings} = useContext(DesignContext);
+  const { showMore, showSwitch, showPostMore, showCreatePost , showCreateNote, showProfileSettings, showFollowers, showFollowing} = useContext(DesignContext);
+
   return (
     <div className='w-full h-screen'>
       <div className='w-full h-screen bg-black flex'>
@@ -46,14 +49,14 @@ function Home() {
             }
           </div>
         </div>
-        <div className='h-screen w-full text-zinc-100 overflow-y-scroll'>
-          <div className='w-full sticky top-0 h-[55px] z-10 bg-black hidden max-md:block border-b border-zinc-800'>
+        <div className='h-screen w-full text-zinc-200 bg-black'>
+          <div className='sticky w-full top-0 h-[55px] z-10 bg-black hidden max-md:block border-b border-zinc-800'>
             <Header />
           </div>
-          <div className='w-full pb-20'>
+          <div className='w-full'>
             <Outlet />
           </div>
-          <div className='w-full fixed bottom-0 z-20 bg-black h-[55px] hidden max-md:block border-t border-zinc-800'>
+          <div className='fixed w-full bottom-0 z-20 bg-black h-[55px] hidden max-md:block border-t border-zinc-800'>
             <BottomNavigation />
           </div>
         </div>
@@ -64,6 +67,8 @@ function Home() {
       {showPostMore && <PostMore />}
       {showCreateNote && <CreateNote />}
       {showProfileSettings && <ProfileSettings />}
+      {showFollowers && <ShowFollowers />}
+      {showFollowing && <ShowFollowing/>}
     </div>
   )
 }

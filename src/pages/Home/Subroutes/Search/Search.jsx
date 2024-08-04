@@ -9,7 +9,7 @@ function Search() {
   const [search, setSearch] = useState('')
 
   return (
-    <div className='w-full'>
+    <div className='w-full h-screen overflow-y-scroll'>
       <div className='max-w-[950px] m-auto px-3'>
         <div className='flex items-center relative mt-6'>
           <FontAwesomeIcon

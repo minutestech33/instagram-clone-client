@@ -14,20 +14,24 @@ function ProfileButton({ children }) {
   return <button className='w-28 py-2 select-none text-sm font-medium rounded-md bg-zinc-700/80 hover:bg-zinc-800'>{children}</button>
 }
 
-function PFF({ content, staticContent }) {
-  return <p className={`text-md font-normal text-zinc-100 ${!staticContent && 'hover:cursor-pointer'}`}>{content}</p>
-}
-
 function Profile() {
   const [currentPhoto, setCurrentPhoto] = useState(0)
-  const {setShowCreateNote, setShowProfileSettings} = useContext(DesignContext)
+  const { setShowCreateNote, setShowProfileSettings, setShowFollowers, setShowFollowing } = useContext(DesignContext)
 
   const goToPrev = () => (currentPhoto !== 0) && setCurrentPhoto(currentPhoto => currentPhoto -= 3)
   const goToNext = () => (currentPhoto !== suggested.length - 3) && setCurrentPhoto(currentPhoto => currentPhoto += 3)
 
+  function PFF({ children, staticContent, title }) {
+    const clickHandler = () => {
+      if (title === 'followers') setShowFollowers(true)
+      if (title === 'following') setShowFollowing(true)
+    }
+    return <p onClick={() => clickHandler()} className={`text-md font-normal select-none text-zinc-100 ${!staticContent && 'hover:cursor-pointer'}`}>{children}</p>
+  }
+
   return (
-    <div className='w-full mt-10'>
-      <div className='w-full max-w-[900px] m-auto'>
+    <div className='w-full h-screen overflow-y-scroll'>
+      <div className='w-full mt-10 max-w-[900px] m-auto'>
         <div className='max-w-[800px] m-auto flex gap-24 max-md:gap-5 items-center max-md:flex-col max-md:items-start max-lg:px-3'>
           <div className='flex items-center gap-5'>
             <div className='w-36 h-36 max-md:w-20 max-md:h-20 relative flex-shrink-0'>
@@ -69,9 +73,9 @@ function Profile() {
                 />
               </div>
               <div className='flex items-center gap-8'>
-                <PFF content={`${5} posts`} staticContent={true} />
-                <PFF content={`${13} followers`} />
-                <PFF content={`${95} following`} />
+                <PFF staticContent={true}>{`${5} posts`}</PFF>
+                <PFF title={'followers'}>{`${13} followers`}</PFF>
+                <PFF title={'following'}>{`${95} following`}</PFF>
               </div>
               <div className='flex flex-col gap-[7px]'>
                 <p className='text-sm font-medium text-zinc-100'>Shuvo Pal</p>
@@ -87,38 +91,50 @@ function Profile() {
             </div>
           </div>
         </div>
-        <div className='w-full mt-10 max-md:mt-8'>
-          <div className='w-full flex items-center justify-between max-lg:px-3'>
-            <p className='text-md font-medium text-zinc-100'>Suggested for you</p>
-            <p className='text-sm font-medium text-blue-500 hover:cursor-pointer'>See all</p>
-          </div>
-          <div className='relative'>
-            <div className='flex overflow-hidden mt-4 overflow-x-scroll max-lg:pl-3 no-scrollbar'>
-              {
-                suggested.map((item, index) =>
-                  <SuggestedProfileInside key={index} cp={currentPhoto} photo={item.profile} username={item.username} name={item.name} />)
-              }
-              {
-                suggested.length > 1 && (
-                  <>
-                    <FontAwesomeIcon
-                      icon={faCircleChevronLeft}
-                      onClick={goToPrev}
-                      className={`text-2xl absolute top-1/2 left-3 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110 max-md:hidden ${currentPhoto === 0 && 'invisible'}`}
-                    />
-                    <FontAwesomeIcon
-                      icon={faCircleChevronRight}
-                      onClick={goToNext}
-                      className={`text-2xl absolute top-1/2 right-3 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110 max-md:hidden ${currentPhoto === suggested.length - 3 && 'invisible'}`}
-                    />
-                  </>
+
+
+
+
+
+        <div className='w-full mt-10 max-md:mt-8 flex items-center justify-between max-lg:px-3'>
+          <p className='text-md font-medium text-zinc-100'>Suggested for you</p>
+          <p className='text-sm font-medium text-blue-500 hover:cursor-pointer'>See all</p>
+        </div>
+
+
+
+        <div className='relative mt-4'>
+          <div className='flex w-full overflow-hidden overflow-x-scroll max-lg:pl-3 no-scrollbar'>
+            {
+              suggested.map((item, index) => {
+                return (
+                  <SuggestedProfileInside key={index} cp={currentPhoto} photo={item.profile} username={item.username} name={item.name} />
                 )
-              }
-            </div>
+              })
+            }
+            {
+              suggested.length > 1 && (
+                <>
+                  <FontAwesomeIcon
+                    icon={faCircleChevronLeft}
+                    onClick={goToPrev}
+                    className={`text-2xl absolute top-1/2 left-3 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110 max-md:hidden ${currentPhoto === 0 && 'invisible'}`}
+                  />
+                  <FontAwesomeIcon
+                    icon={faCircleChevronRight}
+                    onClick={goToNext}
+                    className={`text-2xl absolute top-1/2 right-3 text-zinc-100 hover:cursor-pointer transition-all hover:scale-110 max-md:hidden ${currentPhoto === suggested.length - 3 && 'invisible'}`}
+                  />
+                </>
+              )
+            }
           </div>
         </div>
 
-        <div className='w-full border-t bg-black z-20 border-zinc-800 mt-10 max-md:mt-8 sticky top-0 max-md:top-[55px] max-md:border-b'>
+
+
+
+        <div className='w-full border-t bg-black z-20 border-zinc-800 mt-10 max-md:mt-8 max-md:border-b'>
           <div className='m-auto flex justify-center gap-16 max-md:gap-0'>
             {
               profileRouteOptions.map((item, index) =>
@@ -126,10 +142,18 @@ function Profile() {
             }
           </div>
         </div>
+
+
+
+
         <div className='w-full h-max'>
           <Outlet />
         </div>
         <Footer />
+
+
+
+
       </div>
     </div>
   )

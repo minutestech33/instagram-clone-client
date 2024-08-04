@@ -9,6 +9,8 @@ export const DesignContextProvider = ({ children }) => {
   const [showCreatePost, setShowCreatePost] = useState(false);
   const [showCreateNote, setShowCreateNote] = useState(false);
   const [showProfileSettings, setShowProfileSettings] = useState(false);
+  const [showFollowers, setShowFollowers] = useState(false);
+  const [showFollowing, setShowFollowing] = useState(false);
   return (
     <DesignContext.Provider
       value={{
@@ -17,7 +19,9 @@ export const DesignContextProvider = ({ children }) => {
         showPostMore, setShowPostMore,
         showCreatePost, setShowCreatePost,
         showCreateNote, setShowCreateNote,
-        showProfileSettings, setShowProfileSettings
+        showProfileSettings, setShowProfileSettings,
+        showFollowers, setShowFollowers,
+        showFollowing, setShowFollowing
       }}
     >
       {children}
