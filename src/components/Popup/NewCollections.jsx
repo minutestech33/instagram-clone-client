@@ -67,7 +67,7 @@ function NewCollections() {
                             />
                         </div>
                         <div className='h-[75vh] addFromSaved overflow-y-scroll'>
-                            <div className='w-full h-max grid grid-cols-3 addFromSaved'>
+                            <div className='h-max grid grid-cols-3 addFromSaved'>
                                 {
                                     stories.map((item, index) => {
                                         const find = selectSaved.find(i => i === item.id)
@@ -78,9 +78,9 @@ function NewCollections() {
                                                 } else {
                                                     setSelectSaved(selectSaved.filter(i => i !== item.id))
                                                 }
-                                            }} className='aspect-square relative group hover:cursor-pointer'>
+                                            }} className='relative hover:cursor-pointer'>
                                                 <img src={item.profile} className='object-cover cursor-pointer select-none' alt='' />
-                                                <div className={`h-full ${find ? 'visible' : 'invisible'} group-hover:visible w-full absolute top-0 left-0 bg-zinc-200/30 flex justify-center items-center`}>
+                                                <div className={`h-full ${find ? 'visible' : 'invisible'} w-full absolute top-0 left-0 bg-zinc-200/30 flex justify-center items-center`}>
                                                     {
                                                         find && (
                                                             <FontAwesomeIcon

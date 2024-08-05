@@ -4,7 +4,7 @@ import { collections } from '../../../../../utils/collections'
 import { DesignContext } from '../../../../../context/DesignContent'
 
 function SAVED() {
-  const {setShowNewCollections} = useContext(DesignContext)
+  const { setShowNewCollections } = useContext(DesignContext)
   return (
     <div className='w-full'>
       <div className='flex items-center justify-between mt-8 max-lg:px-3'>
