@@ -15,9 +15,10 @@ import CreateNote from '../../../components/Popup/CreateNote'
 import ProfileSettings from '../../../components/Popup/ProfileSettings'
 import ShowFollowers from '../../../components/Popup/ShowFollowers'
 import ShowFollowing from '../../../components/Popup/ShowFollowing'
+import NewCollections from '../../../components/Popup/NewCollections'
 
 function Home() {
-  const { showMore, showSwitch, showPostMore, showCreatePost , showCreateNote, showProfileSettings, showFollowers, showFollowing} = useContext(DesignContext);
+  const { showMore, showSwitch, showPostMore, showCreatePost , showCreateNote, showProfileSettings, showFollowers, showFollowing, showNewCollections} = useContext(DesignContext);
 
   return (
     <div className='w-full h-screen'>
@@ -69,6 +70,7 @@ function Home() {
       {showProfileSettings && <ProfileSettings />}
       {showFollowers && <ShowFollowers />}
       {showFollowing && <ShowFollowing/>}
+      {showNewCollections && <NewCollections/>}
     </div>
   )
 }

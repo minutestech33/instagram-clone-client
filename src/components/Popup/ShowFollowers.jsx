@@ -20,25 +20,23 @@ function ShowFollowers() {
                     <FontAwesomeIcon
                         icon={faXmark}
                         onClick={() => setShowFollowers(false)}
-                        className='text-zinc-200 text-2xl hover:cursor-pointer absolute top-3 right-5'
+                        className='text-zinc-200 text-2xl hover:cursor-pointer absolute top-3 right-4'
                     />
                 </div>
-                <div className='overflow-y-scroll'>
-                    <div className='h-[60px] px-4 flex items-center justify-center w-full'>
-                        <div className='relative w-full'>
-                            <input type="text" placeholder='Search' className='w-full bg-zinc-700 placeholder:text-zinc-500 caret-zinc-500 text-zinc-200 text-sm font-normal py-[5px] pl-10 pr-3 rounded-md border-none outline-none' />
-                            <FontAwesomeIcon
-                                icon={faMagnifyingGlass}
-                                className='text-zinc-500 text-sm hover:cursor-pointer absolute top-[9px] left-[17px]'
-                            />
-                        </div>
+                <div className='h-[50px] px-4 flex items-center justify-center w-full'>
+                    <div className='relative w-full'>
+                        <input type="text" placeholder='Search' className='w-full bg-zinc-700 placeholder:text-zinc-500 caret-zinc-500 text-zinc-200 text-sm font-normal py-[5px] pl-10 pr-3 rounded-md border-none outline-none' />
+                        <FontAwesomeIcon
+                            icon={faMagnifyingGlass}
+                            className='text-zinc-500 text-sm hover:cursor-pointer absolute top-[9px] left-[17px]'
+                        />
                     </div>
-                    <div className='h-[360px] px-4 pb-4 showFollowers'>
-                        {
-                            suggested.map((item, index) =>
-                                <ProfileFollowers key={index} profile={item.profile} username={item.username} isFollowed={item.isFollowed} name={item.name} btnTitle="Remove" />)
-                        }
-                    </div>
+                </div>
+                <div className='h-[360px] px-4 pb-4 showFollowers overflow-y-scroll'>
+                    {
+                        suggested.map((item, index) =>
+                            <ProfileFollowers key={index} profile={item.profile} username={item.username} isFollowed={item.isFollowed} name={item.name} btnTitle="Remove" />)
+                    }
                 </div>
             </div>
         </div>

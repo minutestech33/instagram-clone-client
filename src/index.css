@@ -12,13 +12,16 @@
     0% {transform: scale(1.1);}
     100% {transform: scale(1);}
 }
-/* ::-webkit-scrollbar {width: 13px}
+/* ::-webkit-scrollbar {width: max-content}
 ::-webkit-scrollbar-thumb {background: rgb(143, 143, 143)}
 ::-webkit-scrollbar-track {background: rgb(87, 87, 87)} */
 
 @media only screen and (max-width: 768px) {
     .showFollowers {
-        height: calc(100vh - 110px);
+        height: calc(100vh - 100px);
+    }
+    .addFromSaved {
+        height: calc(100vh - 100px);
     }
 }
 @media only screen and (max-width: 1350px) {

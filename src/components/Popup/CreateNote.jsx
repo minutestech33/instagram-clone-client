@@ -36,7 +36,7 @@ function CreateNote() {
                         <div className='w-40 h-40 relative'>
                             <img src="https://pics.craiyon.com/2023-07-15/dc2ec5a571974417a5551420a4fb0587.webp" className='h-full w-full select-none rounded-full object-cover hover:cursor-pointer' alt="" />
                             <div className='absolute -top-12 -left-4 bg-zinc-700 p-4 rounded-xl'>
-                                <textarea onChange={(e) => handleNoteInput(e)} className='resize-none text-lg w-40 bg-zinc-700 font-medium text-zinc-200 outline-none border-none max-h-40 placeholder:text-zinc-500 caret-zinc-500' name="note" placeholder='Share a thought...' value={note}></textarea>
+                                <textarea autoFocus={true} onChange={(e) => handleNoteInput(e)} className='resize-none text-lg w-40 bg-zinc-700 font-medium text-zinc-200 outline-none border-none max-h-40 placeholder:text-zinc-500 caret-zinc-500' name="note" placeholder='Share a thought...' value={note}></textarea>
                                 <p className='w-6 h-6 rounded-md bg-zinc-700 rotate-45 -mb-[27px] ml-3'></p>
                             </div>
                         </div>
