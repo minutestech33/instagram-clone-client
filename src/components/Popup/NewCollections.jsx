@@ -67,7 +67,7 @@ function NewCollections() {
                             />
                         </div>
                         <div className='h-[75vh] addFromSaved overflow-y-scroll'>
-                            <div className='h-max grid grid-cols-3 addFromSaved'>
+                            <div className='h-max grid grid-cols-3'>
                                 {
                                     stories.map((item, index) => {
                                         const find = selectSaved.find(i => i === item.id)
