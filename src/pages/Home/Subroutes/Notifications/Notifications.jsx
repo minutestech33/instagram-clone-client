@@ -4,7 +4,7 @@ import Notification from '../../../../components/Notification'
 
 function Notifications() {
   return (
-    <div className='w-full h-screen overflow-y-scroll'>
+    <div className='w-full h-screen pb-20 overflow-y-scroll'>
       <div className='max-w-[650px] m-auto px-3'>
         <p className='text-2xl font-bold text-zinc-200 mt-6'>Notifications</p>
         <div className='pb-4 border-b border-zinc-800 mt-4'>
