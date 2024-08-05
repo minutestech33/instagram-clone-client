@@ -23,7 +23,7 @@ function Home() {
   return (
     <div className='w-full h-screen'>
       <div className='w-full bg-black flex'>
-        <div className={`h-screen w-[288px] max-[1350px]:w-[72px] border-r border-zinc-800 max-md:hidden px-3 pt-6 pb-5 flex flex-col justify-between`}>
+        <div className={`h-screen w-[245px] max-[1350px]:w-[72px] border-r border-zinc-800 max-md:hidden px-3 pt-6 pb-5 flex flex-col justify-between`}>
           <div className='flex flex-col'>
             <NavLink to={"/"} className='w-full flex items-center gap-1 hover:cursor-pointer select-none'>
               <div className={`hidden max-[1350px]:block`}>

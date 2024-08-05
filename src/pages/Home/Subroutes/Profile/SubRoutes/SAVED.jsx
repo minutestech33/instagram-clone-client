@@ -12,7 +12,7 @@ function SAVED() {
         <p onClick={() => setShowNewCollections(true)} className='text-sm font-medium text-blue-500 hover:cursor-pointer'>+ New Collection</p>
       </div>
       <div className='flex flex-col items-center'>
-        <div className='mt-3 grid grid-cols-3 justify-center max-lg:grid-cols-2 max-lg:px-3 gap-3'>
+        <div className='mt-3 grid grid-cols-3 justify-center max-lg:px-3 gap-3'>
           {
             collections.map((item, index) => <SavedCollection key={index} name={item.name} link={item.link} />)
           }

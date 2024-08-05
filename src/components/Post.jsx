@@ -51,7 +51,7 @@ function Post({ id, name, created, photos, likes, isActiveStory, comments, tags,
                         photos.map((photo, index) => {
                             return (
                                 <div key={index} className='flex-shrink-0 w-full select-none h-max flex justify-center transition-transform ease-in-out duration-300' style={{ transform: `translateX(-${currentPhoto * 100}%)` }}>
-                                    <img className='w-full h-[500px] object-cover' src={photo} alt="" />
+                                    <img className='w-full h-[560px] object-cover' src={photo} alt="" />
                                 </div>
                             )
                         })

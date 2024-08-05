@@ -78,7 +78,7 @@ function NewCollections() {
                                                 } else {
                                                     setSelectSaved(selectSaved.filter(i => i !== item.id))
                                                 }
-                                            }} className='relative group hover:cursor-pointer'>
+                                            }} className='aspect-square relative group hover:cursor-pointer'>
                                                 <img src={item.profile} className='object-cover cursor-pointer select-none' alt='' />
                                                 <div className={`h-full ${find ? 'visible' : 'invisible'} group-hover:visible w-full absolute top-0 left-0 bg-zinc-200/30 flex justify-center items-center`}>
                                                     {

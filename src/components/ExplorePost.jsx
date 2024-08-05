@@ -5,7 +5,7 @@ import { faComment, faLayerGroup } from '@fortawesome/free-solid-svg-icons'
 function ExplorePost({photo, comments}) {
     return (
         <div className='w-full relative group'>
-            <img src={photo[0]} className='w-full max-lg:w-80 h-72 max-md:w-52 max-md:h-52 max-sm:w-32 max-sm:h-32 object-cover' alt="" />
+            <img src={photo[0]} className='aspect-square object-cover' alt="" />
             {
                 photo.length > 1 && (
                     <FontAwesomeIcon
