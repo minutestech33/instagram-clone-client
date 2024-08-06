@@ -1,5 +1,5 @@
-import { faMagnifyingGlass, faBars, faChartLine, faCircleExclamation, faTableCells, faUserTag } from '@fortawesome/free-solid-svg-icons'
-import { faHeart, faCompass, faSquarePlus, faUser, faEnvelopeOpen, faSun, faBookmark } from '@fortawesome/free-regular-svg-icons'
+import { faMagnifyingGlass, faLock, faShieldHeart, faBars, faChartLine, faUserGroup, faCircleExclamation, faTableCells, faCircleUser, faUserTag, faBan, faAt, faUserSlash, faChartSimple, faShieldHalved } from '@fortawesome/free-solid-svg-icons'
+import { faHeart, faCompass, faSquarePlus, faBellSlash, faUser, faEnvelopeOpen, faSun, faBookmark, faComment } from '@fortawesome/free-regular-svg-icons'
 
 export const postMoreOptions = [
     { title: 'Report', color: 'text-red-500' },
@@ -31,7 +31,7 @@ export const bottomNavigationOptions = [
 ]
 
 export const showMoreOptions = [
-    { icon: faSun, title: 'Settings', link: '#' },
+    { icon: faSun, title: 'Settings', link: '/accounts/edit' },
     { icon: faChartLine, title: 'Your activity', link: '#' },
     { icon: faBookmark, title: 'Saved', link: '#' },
     { icon: faCircleExclamation, title: 'Report a problem', link: '#' },
@@ -69,4 +69,19 @@ export const profileSettingsOptions = [
     { title: 'Embed'},
     { title: 'Log out'},
     { title: 'Cancel'}
+]
+
+export const accountsSettingsOptions = [
+    { icon: faCircleUser, title: 'Edit profile', link: '/accounts/edit' },
+    { icon: faUser, title: 'Personal details', link: '/accounts/personal_details' },
+    { icon: faShieldHalved, title: 'Password and security', link: '/accounts/password_and_security' },
+    { icon: faBellSlash, title: 'Muted accounts', link: '/accounts/muted_accounts' },
+    { icon: faShieldHeart, title: 'Like and share counts', link: '/accounts/like_count' },
+    { icon: faLock, title: 'Account privacy', link: '/accounts/privacy_setting' },
+    { icon: faUserGroup, title: 'Close friends', link: '/accounts/close_friends' },
+    { icon: faBan, title: 'Blocked accounts', link: '/accounts/blocked_accounts' },
+    { icon: faAt, title: 'Tags and mentions', link: '/accounts/tags_and_mentions' },
+    { icon: faComment, title: 'Comments', link: '/accounts/comments' },
+    { icon: faUserSlash, title: 'Restricted accounts', link: '/accounts/restricted_accounts' },
+    { icon: faChartSimple, title: 'Account Status', link: '/accounts/account_status' },
 ]

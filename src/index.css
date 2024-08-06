@@ -33,3 +33,14 @@
 }
 
 .mainLeft {min-width: calc(100% - 245px);}
+.accountMainLeft {width: calc(100% - 320px);}
+
+.switchCircle {
+    transition: all 0.2s;
+}
+.switchCircleActive {
+    transform: translateX(16px);
+}
+.switchCircleInactive {
+    transform: translateX(0px);
+}
