@@ -1,9 +1,20 @@
 import React from 'react'
+import Footer from '../../../../../components/Footer';
+import TextAngle from '../../../../../components/TextAngle';
 
 function PasswordSecurity() {
   return (
-    <div>
-      PasswordSecurity
+    <div className='w-full h-screen overflow-y-scroll'>
+      <div className='max-w-[620px] h-[60vh] m-auto mt-12'>
+        <p className='text-xl font-bold text-zinc-200'>Password and security</p>
+        <div className='mt-8 bg-zinc-800 rounded-xl divide-y divide-zinc-700 flex flex-col'>
+          <TextAngle title="Change password" />
+          <TextAngle title="Two factor authentication" />
+        </div>
+      </div>
+      <div className='max-w-[700px] m-auto mt-10'>
+        <Footer />
+      </div>
     </div>
   )
 }

@@ -10,7 +10,7 @@ function EditProfile() {
   const [bio, setBio] = useState("");
   const [gender, setGender] = useState('Prefer not to say');
   const [isGender, setIsGender] = useState(false);
-  const [switchVal, setSwitchVal] = useState(false);
+  const [accountSuggestion, setAccountSuggestion] = useState(false);
 
   const handleBio = (e) => {
     const value = e.target.value;
@@ -24,8 +24,8 @@ function EditProfile() {
     setGender(value)
   }
 
-  const switchHandler = (value) => {
-    setSwitchVal(value)
+  const accountSuggestionHandler = (value) => {
+    setAccountSuggestion(value)
   }
 
   return (
@@ -115,12 +115,12 @@ function EditProfile() {
             </div>
             <div className='min-w-16 flex justify-end'>
               <Switch
-                value={switchVal}
+                value={accountSuggestion}
                 bgActive={'bg-zinc-200'}
                 bgInactive={'bg-zinc-700'}
                 circleActive={'bg-black'}
                 circleInactive={'bg-black'}
-                onValueChange={switchHandler}
+                onValueChange={accountSuggestionHandler}
               />
             </div>
           </div>
