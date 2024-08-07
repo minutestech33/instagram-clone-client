@@ -12,6 +12,9 @@ export const DesignContextProvider = ({ children }) => {
   const [showFollowers, setShowFollowers] = useState(false);
   const [showFollowing, setShowFollowing] = useState(false);
   const [showNewCollections, setShowNewCollections] = useState(false);
+  const [changePhoto, setChangePhoto] = useState(false);
+  const [deleteAccount, setDeleteAccount] = useState(false);
+  const [changePassword, setChangePassword] = useState(false);
   return (
     <DesignContext.Provider
       value={{
@@ -23,7 +26,10 @@ export const DesignContextProvider = ({ children }) => {
         showProfileSettings, setShowProfileSettings,
         showFollowers, setShowFollowers,
         showFollowing, setShowFollowing,
-        showNewCollections, setShowNewCollections
+        showNewCollections, setShowNewCollections,
+        changePhoto, setChangePhoto,
+        deleteAccount, setDeleteAccount,
+        changePassword, setChangePassword
       }}
     >
       {children}

@@ -1,16 +1,18 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faCircle } from '@fortawesome/free-regular-svg-icons';
 import { genderOptions } from '../../../../../utils/featuresOptions';
 import Footer from '../../../../../components/Footer';
 import Switch from '../../../../../components/Custom/Switch';
+import { DesignContext } from '../../../../../context/DesignContent';
 
 function EditProfile() {
   const [bio, setBio] = useState("");
   const [gender, setGender] = useState('Prefer not to say');
   const [isGender, setIsGender] = useState(false);
   const [accountSuggestion, setAccountSuggestion] = useState(false);
+  const {setChangePhoto} = useContext(DesignContext)
 
   const handleBio = (e) => {
     const value = e.target.value;
@@ -28,19 +30,21 @@ function EditProfile() {
     setAccountSuggestion(value)
   }
 
+  const changePhotoHandler = () => setChangePhoto(true)
+
   return (
     <div className='w-full h-screen overflow-y-scroll'>
       <div className='max-w-[620px] m-auto mt-12'>
         <p className='text-xl font-bold text-zinc-200'>Edit profile</p>
         <div className='bg-zinc-800 p-4 rounded-xl flex justify-between items-center mt-10'>
           <div className='flex items-center gap-3'>
-            <img src="https://pics.craiyon.com/2023-07-15/dc2ec5a571974417a5551420a4fb0587.webp" className='h-14 w-14 select-none flex-shrink-0 rounded-full object-cover hover:cursor-pointer' alt="" />
+            <img onClick={changePhotoHandler} src="https://pics.craiyon.com/2023-07-15/dc2ec5a571974417a5551420a4fb0587.webp" className='h-14 w-14 select-none flex-shrink-0 rounded-full object-cover hover:cursor-pointer' alt="" />
             <div>
               <p className='font-medium text-zinc-200 text-md'>shuvopal89</p>
               <p className='font-normal text-zinc-400 text-sm'>Shuvo Pal</p>
             </div>
           </div>
-          <button className='border-none outline-none bg-blue-500 text-zinc-200 rounded-lg px-5 py-2 hover:cursor-pointer hover:bg-blue-600 text-sm font-medium'>Change photo</button>
+          <button onClick={changePhotoHandler} className='border-none outline-none bg-blue-500 text-zinc-200 rounded-lg px-5 py-2 hover:cursor-pointer hover:bg-blue-600 text-sm font-medium'>Change photo</button>
         </div>
         <div className='mt-8'>
           <p className='text-md font-bold text-zinc-200'>Website</p>

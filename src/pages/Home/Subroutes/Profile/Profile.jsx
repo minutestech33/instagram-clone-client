@@ -16,7 +16,7 @@ function ProfileButton({ children }) {
 
 function Profile() {
   const [currentPhoto, setCurrentPhoto] = useState(0)
-  const { setShowCreateNote, setShowProfileSettings, setShowFollowers, setShowFollowing } = useContext(DesignContext)
+  const { setShowCreateNote, setShowProfileSettings, setShowFollowers, setShowFollowing, setChangePhoto } = useContext(DesignContext)
 
   const goToPrev = () => (currentPhoto !== 0) && setCurrentPhoto(currentPhoto => currentPhoto -= 3)
   const goToNext = () => (currentPhoto !== suggested.length - 3) && setCurrentPhoto(currentPhoto => currentPhoto += 3)
@@ -35,7 +35,7 @@ function Profile() {
         <div className='max-w-[800px] m-auto flex gap-24 max-md:gap-5 items-center max-md:flex-col max-md:items-start max-lg:px-3'>
           <div className='flex items-center gap-5'>
             <div className='w-36 h-36 max-md:w-20 max-md:h-20 relative flex-shrink-0'>
-              <img src="https://pics.craiyon.com/2023-07-15/dc2ec5a571974417a5551420a4fb0587.webp" className='h-full w-full select-none rounded-full object-cover hover:cursor-pointer' alt="" />
+              <img onClick={() => setChangePhoto(true)} src="https://pics.craiyon.com/2023-07-15/dc2ec5a571974417a5551420a4fb0587.webp" className='h-full w-full select-none rounded-full object-cover hover:cursor-pointer' alt="" />
               <div onClick={() => setShowCreateNote(true)} className='w-16 h-10 rounded-lg bg-zinc-800 absolute -top-8 left-10 max-md:left-3 hover:cursor-pointer'>
                 <p className='text-xs font-normal text-zinc-400 leading-10 ml-2'>Note...</p>
                 <p className='w-3 h-3 rounded-sm bg-zinc-800 rotate-45 -mt-2 ml-3'></p>

@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom'
 function SingleAccountLink({ icon, title, link }) {
     const pathname = useLocation().pathname;
     return (
-        <Link target={title === 'Privacy Center' && '_blank'} to={link} className={`flex items-center pl-1 py-3 ${pathname === link ? 'bg-zinc-800' : ''} hover:bg-zinc-800 rounded-md`}>
+        <Link to={link} className={`flex items-center pl-1 py-3 ${pathname === link ? 'bg-zinc-800' : ''} hover:bg-zinc-800 rounded-md`}>
             <FontAwesomeIcon
                 icon={icon}
                 className='text-xl text-zinc-200 w-12'
