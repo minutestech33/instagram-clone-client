@@ -86,7 +86,7 @@ function EditProfile() {
                             ) : (
                               <FontAwesomeIcon
                                 icon={faCircle}
-                                className='text-2xl text-zinc-200'
+                                className='text-2xl text-zinc-400'
                               />
                             )
                           }

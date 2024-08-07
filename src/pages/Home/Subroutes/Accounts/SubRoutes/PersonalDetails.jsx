@@ -20,7 +20,7 @@ function PersonalDetails() {
         </div>
         <div className='mt-8'>
           <p className='text-md font-bold text-zinc-200'>Account ownership and control</p>
-          <div className='w-full p-4 border border-zinc-700 rounded-xl mt-3 flex justify-between items-center hover:cursor-pointer hover:bg-zinc-900'>
+          <div className='w-full p-4 border border-red-500 rounded-xl mt-3 flex justify-between items-center hover:cursor-pointer hover:bg-zinc-900'>
             <div className='flex flex-col gap-0'>
               <p className='text-md font-normal text-zinc-200'>Delete your account</p>
               <p className='text-xs font-normal text-zinc-400 mt-1'>Deleting your account is permanent. When you delete your Instagram account, your profile, photos, videos, comments, likes and followers will be permanently removed.</p>

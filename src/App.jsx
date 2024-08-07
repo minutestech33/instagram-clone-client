@@ -20,7 +20,6 @@ import BlockedAccounts from './pages/Home/Subroutes/Accounts/SubRoutes/BlockedAc
 import TagsMentions from './pages/Home/Subroutes/Accounts/SubRoutes/TagsMentions'
 import Comments from './pages/Home/Subroutes/Accounts/SubRoutes/Comments'
 import RestrictedAccounts from './pages/Home/Subroutes/Accounts/SubRoutes/RestrictedAccounts'
-import AccountStatus from './pages/Home/Subroutes/Accounts/SubRoutes/AccountStatus'
 import PersonalDetails from './pages/Home/Subroutes/Accounts/SubRoutes/PersonalDetails'
 import PasswordSecurity from './pages/Home/Subroutes/Accounts/SubRoutes/PasswordSecurity'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -53,7 +52,6 @@ function App() {
             <Route path='tags_and_mentions' element={<TagsMentions />} />
             <Route path='comments' element={<Comments />} />
             <Route path='restricted_accounts' element={<RestrictedAccounts />} />
-            <Route path='account_status' element={<AccountStatus />} />
           </Route>
         </Route>
       </Routes>

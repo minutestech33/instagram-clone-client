@@ -1,4 +1,4 @@
-import { faMagnifyingGlass, faLock, faShieldHeart, faBars, faChartLine, faUserGroup, faCircleExclamation, faTableCells, faCircleUser, faUserTag, faBan, faAt, faUserSlash, faChartSimple, faShieldHalved } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faLock, faShieldHeart, faBars, faChartLine, faUserGroup, faCircleExclamation, faTableCells, faCircleUser, faUserTag, faBan, faAt, faUserSlash, faKey, faShieldHalved } from '@fortawesome/free-solid-svg-icons'
 import { faHeart, faCompass, faSquarePlus, faBellSlash, faUser, faEnvelopeOpen, faSun, faBookmark, faComment } from '@fortawesome/free-regular-svg-icons'
 
 export const postMoreOptions = [
@@ -79,9 +79,9 @@ export const accountsSettingsOptions = [
     { icon: faShieldHeart, title: 'Like and share counts', link: '/accounts/like_count' },
     { icon: faLock, title: 'Account privacy', link: '/accounts/privacy_setting' },
     { icon: faUserGroup, title: 'Close friends', link: '/accounts/close_friends' },
-    { icon: faBan, title: 'Blocked accounts', link: '/accounts/blocked_accounts' },
+    { icon: faBan, title: 'Blocked', link: '/accounts/blocked_accounts' },
     { icon: faAt, title: 'Tags and mentions', link: '/accounts/tags_and_mentions' },
     { icon: faComment, title: 'Comments', link: '/accounts/comments' },
     { icon: faUserSlash, title: 'Restricted accounts', link: '/accounts/restricted_accounts' },
-    { icon: faChartSimple, title: 'Account Status', link: '/accounts/account_status' },
+    { icon: faKey, title: 'Privacy Center', link: 'https://privacycenter.instagram.com/?entry_point=instagram_settings_page' },
 ]
