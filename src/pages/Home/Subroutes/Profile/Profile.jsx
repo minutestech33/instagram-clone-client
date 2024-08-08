@@ -13,7 +13,9 @@ import { DesignContext } from '../../../../context/DesignContent'
 function ProfileButton({ children }) {
   const navigate = useNavigate()
   const profileButtonNav = () => {
-    if (children === 'Edit profile') navigate('/accounts/edit') 
+    if (children === 'Edit profile') {
+      window.innerWidth <= 768 ? navigate("/accounts") : navigate('/accounts/edit') 
+    } 
   }
   return <button onClick={profileButtonNav} className='w-28 py-2 select-none text-sm font-medium rounded-md bg-zinc-700/80 hover:bg-zinc-800'>{children}</button>
 }

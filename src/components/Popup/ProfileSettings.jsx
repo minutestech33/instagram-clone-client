@@ -15,7 +15,7 @@ function ProfileSettings() {
         setShowProfileSettings(false);
         switch (title) {
             case 'Settings and privacy':
-                navigate('/accounts/edit');
+                window.innerWidth <= 768 ? navigate("/accounts") : navigate('/accounts/edit') 
                 break;
         }
     }

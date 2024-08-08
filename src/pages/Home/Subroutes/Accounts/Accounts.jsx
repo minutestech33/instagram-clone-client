@@ -41,17 +41,12 @@ function Accounts() {
                     }
                 </div>
             </div>
-            {/* {
-                (window.innerWidth <= 768 && isLeftPanelShown) && (
-                    
-                )
-            } */}
             <div className={`h-screen accountMainLeft max-md:fixed top-0 left-0 bg-black max-md:${(window.innerWidth <= 768 && isLeftPanelShown) ? 'block' : 'hidden'}`}>
-                <div className='p-4 border-b border-zinc-800 hidden max-md:block'>
+                <div className='border-b border-zinc-800 hidden max-md:block'>
                     <FontAwesomeIcon
                         icon={faAngleLeft}
                         onClick={() => hideLeftPanelHandler()}
-                        className='text-xl'
+                        className='text-xl p-4'
                     />
                 </div>
                 <div className='min-h-[75vh]'>
