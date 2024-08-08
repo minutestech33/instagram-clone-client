@@ -34,17 +34,17 @@ function EditProfile() {
 
   return (
     <div className='w-full h-screen overflow-y-scroll max-xl:px-3'>
-      <div className='max-w-[620px] m-auto mt-12'>
+      <div className='max-w-[620px] m-auto mt-12 max-md:mt-4'>
         <p className='text-xl font-bold text-zinc-200'>Edit profile</p>
         <div className='bg-zinc-800 p-4 rounded-xl flex justify-between items-center mt-10'>
           <div className='flex items-center gap-3'>
-            <img onClick={changePhotoHandler} src="https://pics.craiyon.com/2023-07-15/dc2ec5a571974417a5551420a4fb0587.webp" className='h-14 w-14 select-none flex-shrink-0 rounded-full object-cover hover:cursor-pointer' alt="" />
+            <img onClick={changePhotoHandler} src="https://pics.craiyon.com/2023-07-15/dc2ec5a571974417a5551420a4fb0587.webp" className='h-14 w-14 select-none flex-shrink-0 rounded-full object-cover hover:cursor-pointer max-md:h-11 max-md:w-11' alt="" />
             <div>
               <p className='font-medium text-zinc-200 text-md'>shuvopal89</p>
               <p className='font-normal text-zinc-400 text-sm'>Shuvo Pal</p>
             </div>
           </div>
-          <button onClick={changePhotoHandler} className='border-none outline-none bg-blue-500 text-zinc-200 rounded-lg px-5 py-2 hover:cursor-pointer hover:bg-blue-600 text-sm font-medium'>Change photo</button>
+          <button onClick={changePhotoHandler} className='border-none outline-none bg-blue-500 text-zinc-200 rounded-lg px-5 py-2 hover:cursor-pointer hover:bg-blue-600 text-sm font-medium max-md:px-3'>Change photo</button>
         </div>
         <div className='mt-8'>
           <p className='text-md font-bold text-zinc-200'>Website</p>
@@ -133,7 +133,7 @@ function EditProfile() {
           <button className='w-60 py-3 rounded-lg bg-blue-500 text-zinc-200 border-none outline-none text-sm font-medium hover:bg-blue-600'>Submit</button>
         </div>
       </div>
-      <div className='max-w-[700px] m-auto mt-10'>
+      <div className='max-w-[700px] m-auto mt-10 mb-14'>
         <Footer />
       </div>
     </div>

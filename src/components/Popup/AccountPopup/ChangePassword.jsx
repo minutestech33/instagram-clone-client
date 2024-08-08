@@ -29,11 +29,7 @@ function ChangePhoto() {
                 break;
         }
     }
-    const changePassHandler = () => {
-        console.log(currPass.val);
-        console.log(newPass.val);
-        console.log(rePass.val);
-    }
+    const changePassHandler = () => {}
     const togglePassHandler = (t, name) => {
         switch (name) {
             case "Current password":

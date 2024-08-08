@@ -31,13 +31,19 @@
     }
 }
 
+.accountMainLeft {
+    width: calc(100% - 330px);
+}
+
 @media only screen and (max-width: 768px) {
     .showFollowers {
         height: calc(100% - 100px);
     }
-
     .addFromSaved {
         height: calc(100% - 100px);
+    }
+    .accountMainLeft {
+        width: 100%;
     }
 }
 
@@ -57,11 +63,6 @@
     min-width: calc(100% - 245px);
 }
 
-.accountMainLeft {
-    width: calc(100% - 330px);
-}
-
-
 /* code start for switch animation */
 .switchCircle {
     transition: all 0.2s;
@@ -74,6 +75,7 @@
 .switchCircleInactive {
     transform: translateX(0px);
 }
+
 /* code end for switch animation */
 
 ::-webkit-calendar-picker-indicator {

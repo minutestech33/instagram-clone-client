@@ -8,13 +8,13 @@ function PersonalDetails() {
   const {setDeleteAccount} = useContext(DesignContext)
   return (
     <div className='w-full h-screen overflow-y-scroll max-xl:px-3'>
-      <div className='max-w-[620px] m-auto mt-12'>
+      <div className='max-w-[620px] m-auto mt-12 max-md:mt-4'>
         <p className='text-xl font-bold text-zinc-200'>Personal details</p>
         <p className='text-sm font-normal text-zinc-400 mt-8'>Meta uses this information to verify your identity and to keep our community safe. You decide what personal details you make visible to others.</p>
         <div className='mt-8'>
           <p className='text-md font-bold text-zinc-200'>Contact info</p>
-          <input className='text-md font-normal w-full p-4 mt-3 rounded-xl bg-zinc-800 placeholder:text-zinc-500 caret-zinc-500 outline-none border border-zinc-700 focus:border-zinc-300' type="email" placeholder='Email' value={'palshuvo13@gmail.com'} />
-          <input className='text-md font-normal w-full p-4 mt-3 rounded-xl bg-zinc-800 placeholder:text-zinc-500 caret-zinc-500 outline-none border border-zinc-700 focus:border-zinc-300' type="text" placeholder='Phone' value={'01738198296'} />
+          <input onChange={() => {}} className='text-md font-normal w-full p-4 mt-3 rounded-xl bg-zinc-800 placeholder:text-zinc-500 caret-zinc-500 outline-none border border-zinc-700 focus:border-zinc-300' type="email" placeholder='Email' value={'palshuvo13@gmail.com'} />
+          <input onChange={() => {}} className='text-md font-normal w-full p-4 mt-3 rounded-xl bg-zinc-800 placeholder:text-zinc-500 caret-zinc-500 outline-none border border-zinc-700 focus:border-zinc-300' type="text" placeholder='Phone' value={'01738198296'} />
         </div>
         <div className='mt-8'>
           <p className='text-md font-bold text-zinc-200'>Birthday</p>
@@ -36,7 +36,7 @@ function PersonalDetails() {
           </div>
         </div>
       </div>
-      <div className='max-w-[700px] m-auto mt-10'>
+      <div className='max-w-[700px] m-auto mt-10 mb-14'>
         <Footer />
       </div>
     </div>

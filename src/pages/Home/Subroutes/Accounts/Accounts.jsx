@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMeta } from '@fortawesome/free-brands-svg-icons'
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { accountsSettingsOptions } from '../../../../utils/LinkOptions'
 import SingleAccountLink from '../../../../components/SingleAccountLink'
 
 function Accounts() {
+    const [isLeftPanelShown, setIsLeftPanelShown] = useState(false);
+    const showLeftPanelHandler = () => {
+        setIsLeftPanelShown(true)
+    }
+    const hideLeftPanelHandler = () => {
+        setIsLeftPanelShown(false)
+    }
     return (
         <div className='h-screen bg-black flex'>
             <div className='w-[330px] max-md:w-full h-screen overflow-y-scroll border-r border-zinc-800'>
@@ -25,13 +33,25 @@ function Accounts() {
                     {
                         accountsSettingsOptions.map((item, index) => {
                             return (
-                                <SingleAccountLink key={index} icon={item.icon} title={item.title} link={item.link} />
+                                <SingleAccountLink key={index} icon={item.icon} title={item.title} link={item.link} showLeftPanelHandler={showLeftPanelHandler} />
                             )
                         })
                     }
                 </div>
             </div>
-            <div className='h-screen accountMainLeft max-md:hidden'>
+            {/* {
+                (window.innerWidth <= 768 && isLeftPanelShown) && (
+                    
+                )
+            } */}
+            <div className={`h-screen accountMainLeft max-md:fixed top-0 left-0 bg-black max-md:${(window.innerWidth <= 768 && isLeftPanelShown) ? 'block' : 'hidden'}`}>
+                <div className='p-4 border-b border-zinc-800 hidden max-md:block'>
+                    <FontAwesomeIcon
+                        icon={faAngleLeft}
+                        onClick={() => hideLeftPanelHandler()}
+                        className='text-xl'
+                    />
+                </div>
                 <div className='min-h-[75vh]'>
                     <Outlet />
                 </div>

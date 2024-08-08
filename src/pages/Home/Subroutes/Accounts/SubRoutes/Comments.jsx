@@ -13,7 +13,7 @@ function Comments() {
   }
   return (
     <div className='w-full h-screen overflow-y-scroll max-xl:px-3'>
-      <div className='max-w-[620px] h-[60vh] m-auto mt-12'>
+      <div className='max-w-[620px] h-[60vh] m-auto mt-12 max-md:mt-4'>
         <p className='text-xl font-bold text-zinc-200'>Comments</p>
         <p className='text-sm font-medium text-zinc-200 mt-12'>Allow comments from</p>
         <div className='flex flex-col gap-5 mt-4'>
@@ -44,7 +44,7 @@ function Comments() {
           }
         </div>
       </div>
-      <div className='max-w-[700px] m-auto mt-10'>
+      <div className='max-w-[700px] m-auto mt-10 mb-14'>
         <Footer />
       </div>
     </div>

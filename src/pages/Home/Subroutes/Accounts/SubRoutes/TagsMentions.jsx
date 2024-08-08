@@ -41,7 +41,7 @@ function TagsMentions() {
 
   return (
     <div className='w-full h-screen overflow-y-scroll max-xl:px-3'>
-      <div className='max-w-[620px] m-auto mt-12'>
+      <div className='max-w-[620px] m-auto mt-12 max-md:mt-4'>
         <p className='text-xl font-bold text-zinc-200'>Tags and mentions</p>
         <div className='mt-9'>
           <p className={ts}>Who can tag you</p>
@@ -62,7 +62,7 @@ function TagsMentions() {
           </div>
         </div>
       </div>
-      <div className='max-w-[700px] m-auto mt-10'>
+      <div className='max-w-[700px] m-auto mt-10 mb-14'>
         <Footer />
       </div>
     </div>
