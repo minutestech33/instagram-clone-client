@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMeta } from '@fortawesome/free-brands-svg-icons'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
@@ -8,11 +8,13 @@ import SingleAccountLink from '../../../../components/SingleAccountLink'
 
 function Accounts() {
     const [isLeftPanelShown, setIsLeftPanelShown] = useState(false);
+    const navigate = useNavigate()
     const showLeftPanelHandler = () => {
         setIsLeftPanelShown(true)
     }
     const hideLeftPanelHandler = () => {
         setIsLeftPanelShown(false)
+        navigate("/accounts");
     }
     return (
         <div className='h-screen bg-black flex'>
