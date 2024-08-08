@@ -5,7 +5,7 @@ import moment from 'moment'
 
 function Notification({ id, username, message, profile, posted, read }) {
   return (
-    <div className={`w-full p-3 rounded-lg flex justify-between items-center hover:bg-zinc-800 hover:cursor-pointer`}>
+    <div className={`w-full p-4 rounded-lg flex justify-between items-center hover:bg-zinc-900 hover:cursor-pointer`}>
       <div className='flex items-center gap-3'>
         <div className='relative flex-shrink-0'>
           <img src={profile} className='w-9 h-9 object-cover rounded-full' />
@@ -16,9 +16,9 @@ function Notification({ id, username, message, profile, posted, read }) {
             />
           </div>
         </div>
-        <div>
+        <div className='flex flex-col gap-1'>
           <p className='text-sm font-normal text-zinc-400 '><span className='font-semibold hover:cursor-pointer text-zinc-200'>{username}</span> {message}</p>
-          <p className='text-sm font-medium text-zinc-500'>{moment(posted).fromNow()}</p>
+          <p className='text-xs font-medium text-zinc-500'>{moment(posted).fromNow()}</p>
         </div>
       </div>
       <div className='w-10 flex items-center justify-end'>

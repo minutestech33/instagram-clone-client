@@ -56,7 +56,7 @@ function Home() {
         </div>
         <div className='text-zinc-200 bg-black mainLeft'>
           {
-            !pathname.includes('accounts') && (
+            !pathname.includes('accounts') || !pathname.includes('your_activity') ? '' : (
               <div className='sticky top-0 h-[55px] z-10 bg-black hidden max-md:block border-b border-zinc-800'>
                 <Header />
               </div>

@@ -12,7 +12,7 @@ function EditProfile() {
   const [gender, setGender] = useState('Prefer not to say');
   const [isGender, setIsGender] = useState(false);
   const [accountSuggestion, setAccountSuggestion] = useState(false);
-  const {setChangePhoto} = useContext(DesignContext)
+  const { setChangePhoto } = useContext(DesignContext)
 
   const handleBio = (e) => {
     const value = e.target.value;
@@ -51,6 +51,11 @@ function EditProfile() {
           <input className='text-md font-normal w-full p-4 mt-3 rounded-xl bg-zinc-800 placeholder:text-zinc-500 caret-zinc-500 outline-none border border-zinc-700 focus:border-zinc-300' type="text" placeholder='Website' />
         </div>
         <div className='mt-8'>
+          <p className='text-md font-bold text-zinc-200'>Name</p>
+          <input className='text-md font-normal w-full p-4 mt-3 rounded-xl bg-black placeholder:text-zinc-500 caret-zinc-500 outline-none border border-zinc-700 focus:border-zinc-300' type="text" placeholder='Name' />
+          <p className='text-xs font-normal text-zinc-400 mt-2 select-none'>You can't change your profile username. Only changing the name is permissible.</p>
+        </div>
+        <div className='mt-8'>
           <p className='text-md font-bold text-zinc-200'>Bio</p>
           <textarea onChange={(e) => handleBio(e)} className='text-md font-normal w-full p-4 h-24 mt-3 rounded-xl bg-black placeholder:text-zinc-500 caret-zinc-500 outline-none border resize-none border-zinc-700 focus:border-zinc-300' type="text" placeholder='Bio' value={bio} />
           <p className='text-xs font-medium text-zinc-400 mt-1 text-end tracking-wider'>{`${bio.length}/150`}</p>
@@ -64,7 +69,7 @@ function EditProfile() {
               className='text-xs text-zinc-400'
             />
           </div>
-          <p className='text-xs font-medium text-zinc-400 mt-2 select-none'>{'This won\'t be part of your public profile.'}</p>
+          <p className='text-xs font-normal text-zinc-400 mt-2 select-none'>{'This won\'t be part of your public profile.'}</p>
           {
             isGender && (
               <div className='w-[350px] max-w-[350px] py-3 bg-zinc-800 mb-5 rounded-xl absolute top-[91px] right-0 border border-zinc-600 z-10'>

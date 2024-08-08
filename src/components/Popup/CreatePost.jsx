@@ -30,7 +30,10 @@ function CreatePost() {
             </div>
             <FontAwesomeIcon
                 icon={faXmark}
-                onClick={() => setShowCreatePost(false)}
+                onClick={() => {
+                    setShowCreatePost(false)
+                    document.title = "Instagram"
+                }}
                 className='text-zinc-200 text-2xl max-md:top-3 max-md:right-4 absolute right-8 top-5 hover:cursor-pointer'
             />
         </div>

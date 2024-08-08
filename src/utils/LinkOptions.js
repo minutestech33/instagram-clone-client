@@ -1,4 +1,4 @@
-import { faMagnifyingGlass, faLock, faShieldHeart, faBars, faChartLine, faUserGroup, faCircleExclamation, faTableCells, faCircleUser, faUserTag, faBan, faAt, faUserSlash, faKey, faShieldHalved } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faLock, faShieldHeart, faBars, faChartLine, faUserGroup, faCircleExclamation, faTableCells, faCircleUser, faUserTag, faBan, faCalendarDays, faAt, faUserSlash, faKey, faShieldHalved, faAddressCard } from '@fortawesome/free-solid-svg-icons'
 import { faHeart, faCompass, faSquarePlus, faBellSlash, faUser, faEnvelopeOpen, faSun, faBookmark, faComment } from '@fortawesome/free-regular-svg-icons'
 
 export const postMoreOptions = [
@@ -32,7 +32,7 @@ export const bottomNavigationOptions = [
 
 export const showMoreOptions = [
     { icon: faSun, title: 'Settings', link: '/accounts/edit' },
-    { icon: faChartLine, title: 'Your activity', link: '#' },
+    { icon: faChartLine, title: 'Your activity', link: '/your_activity/likes' },
     { icon: faBookmark, title: 'Saved', link: '#' },
     { icon: faCircleExclamation, title: 'Report a problem', link: '#' },
 ]
@@ -84,4 +84,12 @@ export const accountsSettingsOptions = [
     { icon: faComment, title: 'Comments', link: '/accounts/comments' },
     { icon: faUserSlash, title: 'Restricted accounts', link: '/accounts/restricted_accounts' },
     { icon: faKey, title: 'Privacy Center', link: 'https://privacycenter.instagram.com/?entry_point=instagram_settings_page' },
+]
+
+export const activityLinks = [
+    {title: 'LIKES', icon: faHeart, link: '/your_activity/likes'},
+    {title: 'COMMENTS', icon: faComment, link: '/your_activity/comments'},
+    {title: 'TAGS', icon: faAt, link: '/your_activity/tags'},
+    {title: 'MENTIONS', icon: faAddressCard, link: '/your_activity/mentions'},
+    {title: 'HISTORY', icon: faCalendarDays, link: '/your_activity/history'},
 ]

@@ -21,7 +21,7 @@ function CreateNote() {
     }
     return (
         <div className='fixed top-0 left-0 z-50 parent w-full h-screen flex justify-center items-center bg-black/60' onClick={createNoteHandler}>
-            <div className='w-[500px] h-[500px] flex flex-col justify-between max-md:w-full max-md:h-full max-md:rounded-none bg-zinc-800 rounded-2xl'>
+            <div className='w-[500px] h-[500px] flex flex-col justify-between max-md:justify-start max-md:w-full max-md:h-full max-md:rounded-none bg-zinc-800 rounded-2xl'>
                 <div>
                     <div className='p-5 flex items-center justify-between'>
                         <FontAwesomeIcon
@@ -43,13 +43,13 @@ function CreateNote() {
                     </div>
                     {note.length >= 55 && <p className='text-md font-bold text-red-500 text-center mt-6'>{`${note.length}/60`}</p>}
                 </div>
-                <div className='flex justify-center items-end'>
+                <div className='flex justify-center items-end max-md:mt-10'>
                     <div className='flex items-center justify-center gap-2 pb-5'>
                         <FontAwesomeIcon
                             icon={faUserGroup}
                             className='text-zinc-200 text-xs'
                         />
-                        <p className='text-sm font-normal text-zinc-200'>Only visible to your followers.</p>
+                        <p className='text-sm font-normal text-zinc-200'>Only visible to your followers and close friends.</p>
                     </div>
                 </div>
             </div>

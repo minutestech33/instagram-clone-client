@@ -22,6 +22,12 @@ import Comments from './pages/Home/Subroutes/Accounts/SubRoutes/Comments'
 import RestrictedAccounts from './pages/Home/Subroutes/Accounts/SubRoutes/RestrictedAccounts'
 import PersonalDetails from './pages/Home/Subroutes/Accounts/SubRoutes/PersonalDetails'
 import PasswordSecurity from './pages/Home/Subroutes/Accounts/SubRoutes/PasswordSecurity'
+import Your_Activity from './pages/Home/Subroutes/Your_Activity/Your_Activity'
+import LIKES from './pages/Home/Subroutes/Your_Activity/SubRoutes/LIKES'
+import COMMENTS from './pages/Home/Subroutes/Your_Activity/SubRoutes/COMMENTS'
+import TAGS from './pages/Home/Subroutes/Your_Activity/SubRoutes/TAGS'
+import MENTIONS from './pages/Home/Subroutes/Your_Activity/SubRoutes/MENTIONS'
+import HISTORY from './pages/Home/Subroutes/Your_Activity/SubRoutes/HISTORY'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -52,6 +58,13 @@ function App() {
             <Route path='tags_and_mentions' element={<TagsMentions />} />
             <Route path='comments' element={<Comments />} />
             <Route path='restricted_accounts' element={<RestrictedAccounts />} />
+          </Route>
+          <Route path='/your_activity/' element={<Your_Activity />}>
+            <Route path='likes' element={<LIKES />} />
+            <Route path='comments' element={<COMMENTS />} />
+            <Route path='tags' element={<TAGS />} />
+            <Route path='mentions' element={<MENTIONS />} />
+            <Route path='history' element={<HISTORY />} />
           </Route>
         </Route>
       </Routes>
