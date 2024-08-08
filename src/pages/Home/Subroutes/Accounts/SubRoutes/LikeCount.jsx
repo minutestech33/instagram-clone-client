@@ -8,7 +8,7 @@ function LikeCount() {
       setHideLike(value)
   }
   return (
-    <div className='w-full h-screen overflow-y-scroll'>
+    <div className='w-full h-screen overflow-y-scroll max-xl:px-3'>
       <div className='max-w-[620px] h-[60vh] m-auto mt-12'>
         <p className='text-xl font-bold text-zinc-200'>Like and share counts</p>
         <TextSwitch title="Hide like & share counts" switchVal={hideLike} swithHandler={hideLikeHandler} />

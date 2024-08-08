@@ -61,6 +61,8 @@
     width: calc(100% - 330px);
 }
 
+
+/* code start for switch animation */
 .switchCircle {
     transition: all 0.2s;
 }
@@ -72,6 +74,8 @@
 .switchCircleInactive {
     transform: translateX(0px);
 }
+/* code end for switch animation */
+
 ::-webkit-calendar-picker-indicator {
     filter: invert(100%);
 }

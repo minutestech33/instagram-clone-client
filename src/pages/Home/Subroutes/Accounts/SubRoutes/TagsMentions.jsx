@@ -40,7 +40,7 @@ function TagsMentions() {
   const opts = 'py-3 rounded-2xl border border-zinc-700 flex flex-col mt-3';
 
   return (
-    <div className='w-full h-screen overflow-y-scroll'>
+    <div className='w-full h-screen overflow-y-scroll max-xl:px-3'>
       <div className='max-w-[620px] m-auto mt-12'>
         <p className='text-xl font-bold text-zinc-200'>Tags and mentions</p>
         <div className='mt-9'>

@@ -1,18 +1,21 @@
 import React, { useContext } from 'react'
 import { DesignContext } from '../../context/DesignContent'
 import { profileSettingsOptions } from '../../utils/LinkOptions'
+import { useNavigate } from 'react-router-dom'
 
 function ProfileSettings() {
     const { setShowProfileSettings } = useContext(DesignContext)
+    const navigate = useNavigate()
     const createNoteHandler = (e) => {
         if (e.target.classList.contains("parent")) {
             setShowProfileSettings(false)
         }
     }
     const clickHandler = (title) => {
+        setShowProfileSettings(false);
         switch (title) {
-            case 'Cancel':
-                setShowProfileSettings(false);
+            case 'Settings and privacy':
+                navigate('/accounts/edit');
                 break;
         }
     }

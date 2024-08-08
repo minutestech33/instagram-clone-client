@@ -7,7 +7,7 @@ import { DesignContext } from '../../../../../context/DesignContent';
 function PersonalDetails() {
   const {setDeleteAccount} = useContext(DesignContext)
   return (
-    <div className='w-full h-screen overflow-y-scroll'>
+    <div className='w-full h-screen overflow-y-scroll max-xl:px-3'>
       <div className='max-w-[620px] m-auto mt-12'>
         <p className='text-xl font-bold text-zinc-200'>Personal details</p>
         <p className='text-sm font-normal text-zinc-400 mt-8'>Meta uses this information to verify your identity and to keep our community safe. You decide what personal details you make visible to others.</p>

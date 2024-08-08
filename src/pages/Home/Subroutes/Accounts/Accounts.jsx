@@ -8,7 +8,7 @@ import SingleAccountLink from '../../../../components/SingleAccountLink'
 function Accounts() {
     return (
         <div className='h-screen bg-black flex'>
-            <div className='w-[330px] h-screen overflow-y-scroll'>
+            <div className='w-[330px] max-md:w-full h-screen overflow-y-scroll border-r border-zinc-800'>
                 <p className='text-xl font-bold text-zinc-200 mt-9 pl-10'>Settings</p>
                 <div className='m-4 p-5 bg-zinc-800 rounded-xl hover:bg-zinc-700 hover:cursor-pointer'>
                     <div className='flex items-center gap-1'>
@@ -31,7 +31,7 @@ function Accounts() {
                     }
                 </div>
             </div>
-            <div className='h-screen accountMainLeft'>
+            <div className='h-screen accountMainLeft max-md:hidden'>
                 <div className='min-h-[75vh]'>
                     <Outlet />
                 </div>

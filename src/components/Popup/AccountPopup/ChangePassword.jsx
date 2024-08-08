@@ -30,7 +30,9 @@ function ChangePhoto() {
         }
     }
     const changePassHandler = () => {
-        console.log(currPass)
+        console.log(currPass.val);
+        console.log(newPass.val);
+        console.log(rePass.val);
     }
     const togglePassHandler = (t, name) => {
         switch (name) {

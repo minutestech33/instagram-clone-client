@@ -6,12 +6,16 @@ import { suggested } from '../../../../utils/suggested'
 import SuggestedProfileInside from '../../../../components/SuggestedProfileInside'
 import { profileRouteOptions } from '../../../../utils/LinkOptions'
 import ProfileRoute from '../../../../components/ProfileRoute'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import Footer from '../../../../components/Footer'
 import { DesignContext } from '../../../../context/DesignContent'
 
 function ProfileButton({ children }) {
-  return <button className='w-28 py-2 select-none text-sm font-medium rounded-md bg-zinc-700/80 hover:bg-zinc-800'>{children}</button>
+  const navigate = useNavigate()
+  const profileButtonNav = () => {
+    if (children === 'Edit profile') navigate('/accounts/edit') 
+  }
+  return <button onClick={profileButtonNav} className='w-28 py-2 select-none text-sm font-medium rounded-md bg-zinc-700/80 hover:bg-zinc-800'>{children}</button>
 }
 
 function Profile() {

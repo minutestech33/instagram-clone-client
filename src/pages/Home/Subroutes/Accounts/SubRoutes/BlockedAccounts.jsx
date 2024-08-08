@@ -4,7 +4,7 @@ import CloseFriend from '../../../../../components/CloseFriend';
 
 function BlockedAccounts() {
   return (
-    <div className='w-full h-screen overflow-y-scroll'>
+    <div className='w-full h-screen overflow-y-scroll max-xl:px-3'>
       <div className='max-w-[620px] m-auto mt-12'>
         <p className='text-xl font-bold text-zinc-200'>Blocked accounts</p>
         {/* <div className='h-[50vh] mt-8'>

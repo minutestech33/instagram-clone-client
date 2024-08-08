@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { DesignContext } from '../../../context/DesignContent'
 import ShowMore from '../../../components/Popup/ShowMore'
 import CreatePost from '../../../components/Popup/CreatePost'
@@ -21,7 +21,8 @@ import DeleteAccount from '../../../components/Popup/AccountPopup/DeleteAccount'
 import ChangePassword from '../../../components/Popup/AccountPopup/ChangePassword'
 
 function Home() {
-  const { showMore, showSwitch, showPostMore, showCreatePost , showCreateNote, showProfileSettings, showFollowers, showFollowing, showNewCollections, changePhoto, deleteAccount, changePassword} = useContext(DesignContext);
+  const { showMore, showSwitch, showPostMore, showCreatePost, showCreateNote, showProfileSettings, showFollowers, showFollowing, showNewCollections, changePhoto, deleteAccount, changePassword } = useContext(DesignContext);
+  const pathname = useLocation().pathname;
 
   return (
     <div className='w-full h-screen'>
@@ -54,9 +55,13 @@ function Home() {
           </div>
         </div>
         <div className='text-zinc-200 bg-black mainLeft'>
-          <div className='sticky top-0 h-[55px] z-10 bg-black hidden max-md:block border-b border-zinc-800'>
-            <Header />
-          </div>
+          {
+            !pathname.includes('accounts') && (
+              <div className='sticky top-0 h-[55px] z-10 bg-black hidden max-md:block border-b border-zinc-800'>
+                <Header />
+              </div>
+            )
+          }
           <div className='w-full'>
             <Outlet />
           </div>
@@ -72,11 +77,11 @@ function Home() {
       {showCreateNote && <CreateNote />}
       {showProfileSettings && <ProfileSettings />}
       {showFollowers && <ShowFollowers />}
-      {showFollowing && <ShowFollowing/>}
-      {showNewCollections && <NewCollections/>}
-      {changePhoto && <ChangePhoto/>}
-      {deleteAccount && <DeleteAccount/>}
-      {changePassword && <ChangePassword/>}
+      {showFollowing && <ShowFollowing />}
+      {showNewCollections && <NewCollections />}
+      {changePhoto && <ChangePhoto />}
+      {deleteAccount && <DeleteAccount />}
+      {changePassword && <ChangePassword />}
     </div>
   )
 }
